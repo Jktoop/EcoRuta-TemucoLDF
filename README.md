@@ -1,4 +1,4 @@
-# Nombre del Proyecto / Estudio
+# EcoRuta Temuco / Los Del Frente
 
 ## Integrantes y roles (Sprint actual)
 
