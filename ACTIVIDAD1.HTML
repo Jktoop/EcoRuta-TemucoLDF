@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="06_starter.css">
+</head>
+<body>
+    <!-- 1. Barra de Herramientas Superior -->
+    <header class="barra-superior">
+        <ul class="herramientas-accesibilidad">
+            <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1216/1216895.png" alt="Accesibilidad" class="icono-accesibilidad"> Accesibilidad</a></li>
+            <li><button class="boton-fuente font-a-plus">A+</button></li>
+            <li><button class="boton-fuente font-a-minus">A-</button></li>
+            <li><button class="boton-leer-texto"><img src="https://cdn-icons-png.flaticon.com/512/882/882916.png" alt="Leer texto"> Leer texto</button></li>
+        </ul>
+        <div class="selector-idioma">
+            <select>
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+                <option value="pt">PT</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- 2. Banner Principal (Encabezado con logo y búsqueda) -->
+    <section class="banner-principal">
+        <section class="banner-principal">
+        <div class="contenedor-banner">
+            <p class="region-info">
+                <img src="https://www.ecocamp.travel/hs-fs/hubfs/9%20(1%20of%201).jpg?width=5417&name=9%20(1%20of%201).jpg" alt="Icono Calendario" class="icono-calendario">
+                REGIÓN DE LA ARAUCANÍA
+            </p>
+            <h1 class="titulo-principal">EcoRuta Temuco</h1>
+            <div class="barra-busqueda">
+                <input type="text" placeholder="Explorar destinos...">
+                <button type="submit" class="boton-buscar">Buscar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- El contenido principal de la página irá aquí -->
+    <main>
+        <!-- 3. Sección de Resumen de Ruta -->
+        <section class="seccion-resumen-ruta">
+            <section class="seccion-resumen-ruta">
+        <div class="fondo-ruta">
+            <!-- La imagen de fondo del río se aplicará con CSS -->
+            <div class="info-ruta-superpuesta">
+                <h2>Ejemplo de mi viaje</h2>
+                <p>Ruta Andina - 4 destinos</p>
+            </div>
+        </div>
+        
+        <div class="tarjeta-resumen">
+            <div class="estadisticas-ruta">
+                <div class="estadistica">
+                    <span class="valor">340 km</span>
+                    <span class="etiqueta">DISTANCIA</span>
+                </div>
+                <div class="estadistica">
+                    <span class="valor">3 días</span>
+                    <span class="etiqueta">DURACIÓN</span>
+                </div>
+                <div class="estadistica">
+                    <span class="valor">Moderada</span>
+                    <span class="etiqueta">DIFICULTAD</span>
+                </div>
+            </div>
+            <div class="acciones-ruta">
+                <button class="boton-iniciar-ruta">Iniciar ruta</button>
+                <button class="boton-guardar">Guardar</button>
+            </div>
+        </div>
+    </section>
+    
+
+        <!-- 4. Sección de Tarjetas de Favoritos -->
+        <section class="seccion-favoritos">
+            <section class="seccion-favoritos">
+        <div class="encabezado-favoritos">
+            <h3>Favoritos de los usuarios</h3>
+            <a href="#" class="enlace-ver-todos">Ver todos →</a>
+        </div>
+        <div class="contenedor-tarjetas">
+            <!-- Tarjeta de ejemplo 1 -->
+            <div class="tarjeta-favorito">
+                <img src="https://via.placeholder.com/200x120?text=Naturaleza" alt="Naturaleza">
+                <span class="etiqueta-tarjeta etiqueta-naturaleza">Naturaleza</span>
+            </div>
+            <!-- Tarjeta de ejemplo 2 -->
+            <div class="tarjeta-favorito">
+                <img src="https://via.placeholder.com/200x120?text=Aventura" alt="Aventura">
+                <span class="etiqueta-tarjeta etiqueta-aventura">Aventura</span>
+            </div>
+            <!-- Tarjeta de ejemplo 3 -->
+            <div class="tarjeta-favorito">
+                <img src="https://via.placeholder.com/200x120?text=Cultura" alt="Cultura">
+                <span class="etiqueta-tarjeta etiqueta-cultura">Cultura</span>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- 5. Barra de Navegación Inferior -->
+    <nav class="navegacion-inferior">
+        <nav class="navegacion-inferior">
+        <ul class="enlaces-navegacion">
+            <li><a href="#" class="enlace-inicio active"><img src="https://cdn-icons-png.flaticon.com/512/1946/1946433.png" alt="Inicio"> Inicio</a></li>
+            <li><a href="#" class="enlace-rutas"><img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="Rutas"> Rutas</a></li>
+            <li><a href="#" class="enlace-mapa"><img src="https://cdn-icons-png.flaticon.com/512/854/854901.png" alt="Mapa"> Mapa</a></li>
+            <li><a href="#" class="enlace-perfil"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Perfil"> Perfil</a></li>
+        </ul>
+        <button class="boton-ayuda"><img src="https://cdn-icons-png.flaticon.com/512/189/189665.png" alt="Ayuda"></button>
+    </nav>
+
+    
+</body>
+</html>
