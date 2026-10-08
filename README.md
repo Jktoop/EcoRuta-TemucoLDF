@@ -1,13 +1,13 @@
 # EcoRuta Temuco / Los Del Frente
 
-## Integrantes y roles (Sprint actual)
+## Integrantes y roles (Sprint 1)
 
 | Nombre | Rol ágil |
 |---|---|
-| Sebastian San Martin | Product Owner |
-| Sakin Contreras | Scrum Master |
-| Joaquin Carrillo | Developer |
-| Kevin Inalaf | QA/Tester |
+| Sebastian San Martin | QA/Tester |
+| Sakin Contreras | Developer |
+| Joaquin Carrillo | Scrum Master |
+| Kevin Inalaf | Product Owner |
 
 ## Descripción breve
 
