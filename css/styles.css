@@ -1,10 +1,3 @@
-/* ==========================================================
-   EcoRuta Temuco - estilos básicos
-   Orden: 1) base  2) barra  3) banner  4) top 3
-          5) detalle  6) lista Nº4-Nº8  7) responsive
-   ========================================================== */
-
-/* ---------- 1) BASE ---------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,13 +13,40 @@
   --texto: #2b2b2b;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Nunito", Arial, sans-serif;
   background: var(--fondo);
   color: var(--texto);
+  line-height: 1.4;
 }
 
-h1, h2 {
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--dorado);
+  outline-offset: 2px;
+}
+
+h1,
+h2 {
   font-family: "Playfair Display", Georgia, serif;
 }
 
@@ -35,20 +55,22 @@ h1, h2 {
   font-size: 12px;
 }
 
-/* ---------- 2) BARRA SUPERIOR ---------- */
+
 .barra {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   background: #fff;
-  padding: 8px 16px;
+  padding: 8px 12px;
   border-bottom: 1px solid #e5e5e5;
 }
 
 .marca {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .logo {
@@ -56,6 +78,7 @@ h1, h2 {
   place-items: center;
   width: 36px;
   height: 36px;
+  flex-shrink: 0;
   background: var(--verde);
   border-radius: 8px;
   font-size: 18px;
@@ -75,11 +98,31 @@ h1, h2 {
 .barra-derecha {
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.navegacion {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.navegacion a {
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navegacion a:hover {
+  color: var(--verde);
+  
 }
 
 .puntos {
   display: flex;
+  align-items: center;
   gap: 5px;
 }
 
@@ -89,9 +132,20 @@ h1, h2 {
   border-radius: 10px;
 }
 
-.puntos .p1 { width: 16px; background: var(--verde); }
-.puntos .p2 { width: 7px;  background: var(--naranja); }
-.puntos .p3 { width: 7px;  background: #ddd; }
+.puntos .p1 {
+  width: 16px;
+  background: var(--verde);
+}
+
+.puntos .p2 {
+  width: 7px;
+  background: var(--naranja);
+}
+
+.puntos .p3 {
+  width: 7px;
+  background: #ddd;
+}
 
 .idioma {
   background: #f1eee8;
@@ -101,17 +155,16 @@ h1, h2 {
   font-family: inherit;
   font-weight: 700;
   font-size: 12px;
-  cursor: pointer;
 }
 
-/* ---------- 3) BANNER VERDE ---------- */
 .banner {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
   background: linear-gradient(90deg, var(--verde-oscuro), var(--verde));
   color: #fff;
-  padding: 18px 18px 20px;
+  padding: 16px 14px 18px;
 }
 
 .etiqueta {
@@ -122,7 +175,7 @@ h1, h2 {
 }
 
 .banner h1 {
-  font-size: 28px;
+  font-size: 24px;
   margin: 2px 0;
 }
 
@@ -132,18 +185,19 @@ h1, h2 {
 }
 
 .trofeo {
-  font-size: 32px;
+  align-self: flex-end;
+  font-size: 30px;
 }
 
-/* ---------- 4) TOP 3 ---------- */
 .contenido {
-  padding: 14px 14px 30px;
+  width: 100%;
+  padding: 12px 12px 24px;
 }
 
 .top3 {
   display: grid;
-  grid-template-columns: 1.45fr 1fr 0.75fr;
-  gap: 8px;
+  grid-template-columns: 1fr;
+  gap: 10px;
   align-items: start;
 }
 
@@ -151,36 +205,58 @@ h1, h2 {
   position: relative;
   display: flex;
   align-items: flex-end;
+  min-width: 0;
   color: #fff;
   border-radius: 14px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2 ease;
 }
 
-/* El número 1 es más alto que los otros */
-.n1 { height: 210px; }
-.n2 { height: 180px; }
-.n3 { height: 155px; }
+.destacado:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
 
-/* Fondos de relleno (cambia por tus fotos, ver abajo) */
-.n1 { background-image: linear-gradient(160deg, #1f4a3b, #0f2a24); }
-.n2 { background-image: linear-gradient(180deg, #2e8fd4 0%, #8ec6e8 45%, #2f5d2b 100%); }
-.n3 { background-image: linear-gradient(160deg, #6f8a4a, #3d5a2a); }
+.n1 {
+  height: 180px;
+}
 
+.n2 {
+  height: 180px;
+}
 
-.n1 { background-image: url("https://d6myp1633h7qr.cloudfront.net/products/cd3d8a2e-8757-427c-804b-61ed2159d88d_desktop.webp"); }
-.n2 { background-image: url("https://chileestuyo.cl/wp-content/uploads/2022/11/23.Lago-y-Volcan-Villarrica.jpg"); }
-.n3 { background-image: url("https://patrimonio.bienes.cl/wp-content/uploads/2020/02/mh_00650_2017_tf_005.jpg"); }
+.n3 {
+  height: 180px;
+}
 
-
-/* Degradado oscuro abajo para que se lea el texto */
 .destacado::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 55%);
+}
+
+
+.destacado .foto {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.destacado:hover .foto {
+  transform: scale(1.08);
+}
+
+.mini-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .info {
@@ -214,15 +290,24 @@ h1, h2 {
   color: #fff;
 }
 
-.oro    { background: var(--dorado); }
-.plata  { background: #9aa0a6; }
-.bronce { background: #d98e3f; }
+.oro {
+  background: var(--dorado);
+}
+
+.plata {
+  background: #9aa0a6;
+}
+
+.bronce {
+  background: #d98e3f;
+}
 
 .chip {
   position: absolute;
   top: 8px;
   right: 8px;
   z-index: 2;
+  max-width: calc(100% - 16px);
   background: rgba(0, 0, 0, 0.45);
   border-radius: 20px;
   padding: 3px 9px;
@@ -230,13 +315,12 @@ h1, h2 {
   font-weight: 700;
 }
 
-/* ---------- 5) DETALLE DEL Nº1 ---------- */
 .detalle {
   background: #fff;
   border: 1px solid #e5e5e5;
   border-left: 4px solid var(--dorado);
   border-radius: 10px;
-  padding: 10px 14px;
+  padding: 10px 12px;
   margin: 12px 0 14px;
   font-size: 12px;
   line-height: 1.5;
@@ -251,6 +335,7 @@ h1, h2 {
 
 .tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
   margin-top: 8px;
 }
@@ -263,7 +348,6 @@ h1, h2 {
   font-size: 10px;
 }
 
-/* ---------- 6) LISTA Nº4 - Nº8 ---------- */
 .subtitulo {
   font-size: 12px;
   color: #7a6a5a;
@@ -272,36 +356,31 @@ h1, h2 {
 
 .lista {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 1fr;
   gap: 10px;
 }
 
 .mini {
+  min-width: 0;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mini:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0, 2);
 }
 
 .mini-foto {
   position: relative;
-  height: 78px;
+  height: 110px;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
-
-/* Fondos de relleno (cámbialos por fotos igual que arriba) */
-.f4 { background-image: linear-gradient(135deg, #8a5a2b, #4d6b2a); }
-.f5 { background-image: linear-gradient(180deg, #b9c2c7, #5f7360); }
-.f6 { background-image: linear-gradient(180deg, #5aa0d8, #3f7a32); }
-.f7 { background-image: linear-gradient(180deg, #7ab0d8, #5a8a8a); }
-.f8 { background-image: linear-gradient(180deg, #6aa6dc, #e4eef5); }
-
-.f4 { background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLDhEH0T-tCFZDFMTPhSEmxpmlS1eZahoIYooZ1cR7tg&s=10");}
-.f5 { background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f1/Villarrica%2C_Lago_Villarrica%2C_2019_%2802%29.jpg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original");}
-.f6 { background-image: url("https://images.adsttc.com/media/images/676d/79a6/3fc1/3e01/8824/d52f/newsletter/parque-urbano-isla-cautin-osvaldo-moreno-y-martinez-and-asociados_16.jpg?1735227846");}
-.f7 { background-image: url("https://www.institutofrances.cl/wp-content/uploads/2021/11/Residencia-Fundacion-Mar-Adentro.jpeg");}
-.f8 { background-image: url("https://www.madera21.cl/wp-content/uploads/2022/07/PORTADA-NIELOL-FINAL-1-1024x651.jpg");}
 
 .num {
   position: absolute;
@@ -324,15 +403,103 @@ h1, h2 {
   margin-bottom: 3px;
 }
 
-/* ---------- 7) RESPONSIVE (celulares) ---------- */
-@media (max-width: 800px) {
-  .top3 {
-    grid-template-columns: 1fr;
+@media (min-width: 600px) {
+  .barra {
+    padding: 8px 16px;
   }
-  .n1, .n2, .n3 {
+
+  .barra-derecha {
+    width: auto;
+    justify-content: initial;
+    gap: 14px;
+  }
+
+  .banner {
+    padding: 18px 18px 20px;
+  }
+
+  .banner h1 {
+    font-size: 28px;
+  }
+
+  .contenido {
+    padding: 14px 14px 28px;
+  }
+
+  .top3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .n1 {
+    height: 200px;
+  }
+
+  .n2,
+  .n3 {
     height: 180px;
   }
+
   .lista {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .lista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mini-foto {
+    height: 90px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .barra {
+    padding: 8px 16px;
+  }
+
+  .barra-derecha {
+    gap: 16px;
+  }
+
+  .banner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .trofeo {
+    align-self: auto;
+    font-size: 32px;
+  }
+
+  .contenido {
+    padding: 14px 14px 30px;
+  }
+
+  .top3 {
+    grid-template-columns: 1.45fr 1fr 0.75fr;
+  }
+
+  .n1 {
+    height: 210px;
+  }
+
+  .n2 {
+    height: 180px;
+  }
+
+  .n3 {
+    height: 155px;
+  }
+
+  .lista {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .mini-foto {
+    height: 78px;
   }
 }
