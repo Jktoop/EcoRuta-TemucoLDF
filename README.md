@@ -32,8 +32,8 @@ npm run dev
 
 ## Estado del proyecto
 
-- Sprint actual: Sprint 0 (Kickoff)
-- Última actualización: (13/08/2026)
+- Sprint actual: Sprint 1
+- Última actualización: (11/10/2026)
 
 ## Tablero Kanban
 
@@ -41,4 +41,4 @@ Enlace al tablero: https://trello.com/invite/b/6a7dd5eb5157718e082ae58c/ATTIec67
 
 ## Enlace de despliegue
 
-(agregar enlace una vez desplegado)
+https://jktoop.github.io/EcoRuta-TemucoLDF/
