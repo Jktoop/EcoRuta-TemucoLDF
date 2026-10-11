@@ -7,15 +7,14 @@
   <title>EcoRuta Temuco - Contacto</title>
 
   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/contacto.css">
 </head>
 
 <body>
 
   <header class="barra">
-
     <div class="marca">
-      <span class="logo"></span>
-
+      <span class="logo">🌳</span>
       <div>
         <strong>EcoRuta</strong>
         <small>TEMUCO · CL</small>
@@ -29,53 +28,67 @@
       <a href="contacto.html">Contacto</a>
     </nav>
 
+    <div class="barra-derecha">
+      <span class="puntos">
+        <i class="p1"></i>
+        <i class="p2"></i>
+        <i class="p3"></i>
+      </span>
+
+      <!-- Selector de idioma interactivo -->
+      <details class="language-dropdown">
+        <summary class="dropdown-toggle" aria-label="Cambiar idioma">
+          <span>🇨🇱</span> 
+          <span>CL ES</span>
+          <span class="arrow">▼</span>
+        </summary>
+        <ul class="dropdown-menu" role="menu">
+          <li>
+            <button class="dropdown-item active" role="menuitem" type="button">
+              <span>🇨🇱</span> Español (CL)
+            </button>
+          </li>
+          <li>
+            <button class="dropdown-item" role="menuitem" type="button">
+              <span>🇬🇧</span> English (UK)
+            </button>
+          </li>
+          <li>
+            <button class="dropdown-item" role="menuitem" type="button">
+              <span>🇧🇷</span> Português (BR)
+            </button>
+          </li>
+        </ul>
+      </details>
+    </div>
   </header>
 
   <main class="contenido">
-
     <section>
-
       <h1>Contacto</h1>
-
       <p>
         ¿Tienes alguna pregunta o quieres contactarnos?
       </p>
 
       <form>
-
         <div>
           <label for="nombre">Nombre</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-          >
+          <input type="text" id="nombre" name="nombre">
         </div>
 
         <div>
           <label for="correo">Correo electrónico</label>
-          <input
-            type="email"
-            id="correo"
-            name="correo"
-          >
+          <input type="email" id="correo" name="correo">
         </div>
 
         <div>
           <label for="mensaje">Mensaje</label>
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            rows="5"
-          ></textarea>
+          <textarea id="mensaje" name="mensaje" rows="5"></textarea>
         </div>
 
         <button type="submit">Enviar mensaje</button>
-
       </form>
-
     </section>
-
   </main>
 
 </body>
