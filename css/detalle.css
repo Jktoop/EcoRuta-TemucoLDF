@@ -1,0 +1,38 @@
+.detalle {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-left: 4px solid var(--dorado);
+  border-radius: 10px;
+  padding: 14px;
+  margin: 12px 0 14px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.detalle-titulo {
+  color: var(--naranja);
+  font-weight: 700;
+  font-size: 11px;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.detalle h1 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.tags span {
+  background: #f1eee8;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 11px;
+}

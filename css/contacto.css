@@ -1,0 +1,65 @@
+.contenido > section:first-child {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.contenido > section:first-child h1 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.contenido > section:first-child > p {
+  color: #7a6a5a;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+form > div {
+  display: grid;
+  gap: 5px;
+}
+
+form label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 1px solid #d8d3ca;
+  border-radius: 8px;
+  padding: 9px 10px;
+  background: #fff;
+  color: var(--texto);
+  font: inherit;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: 2px solid var(--dorado);
+  outline-offset: 1px;
+}
+
+form button {
+  justify-self: start;
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 14px;
+  background: var(--verde);
+  color: #fff;
+  font-weight: 700;
+}
+
+form button:hover {
+  background: var(--verde-oscuro);
+}
