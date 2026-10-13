@@ -108,6 +108,13 @@ h1, h2, h3, h4 {
   font-weight: bold;
 }
 
+.navegacion a + a::before {
+  content: "|";
+  color: #b8b3aa;
+  font-weight: 400;
+  margin-right: 8px;
+}
+
 .navegacion a:hover {
   color: var(--verde);
 }
