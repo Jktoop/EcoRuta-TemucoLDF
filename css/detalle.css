@@ -1,6 +1,6 @@
 .detalle {
-  background: #fff;
-  border: 1px solid #e5e5e5;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
   border-left: 4px solid var(--dorado);
   border-radius: 10px;
   padding: 14px;
@@ -30,8 +30,8 @@
 }
 
 .tags span {
-  background: #f1eee8;
-  border: 1px solid #ddd;
+  background: var(--tag-fondo);
+  border: 1px solid var(--borde);
   border-radius: 20px;
   padding: 3px 10px;
   font-size: 11px;

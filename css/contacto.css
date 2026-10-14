@@ -9,7 +9,7 @@
 }
 
 .contenido > section:first-child > p {
-  color: #7a6a5a;
+  color: var(--texto-secundario);
   font-size: 13px;
   margin-bottom: 16px;
 }
@@ -32,10 +32,10 @@ form label {
 form input,
 form textarea {
   width: 100%;
-  border: 1px solid #d8d3ca;
+  border: 1px solid var(--borde);
   border-radius: 8px;
   padding: 9px 10px;
-  background: #fff;
+  background: var(--superficie);
   color: var(--texto);
   font: inherit;
 }
