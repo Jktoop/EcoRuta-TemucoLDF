@@ -32,3 +32,35 @@ async function mostrarClima() {
 if (estado) {
   mostrarClima();
 }
+
+function mostrarAviso(clima) {
+  if (clima.temperature_2m < 8) {
+    aviso.textContent = "Hace frío: lleva abrigo.";
+  } else if (clima.wind_speed_10m > 40) {
+    aviso.textContent = "Viento fuerte: evita los miradores.";
+  } else {
+    aviso.textContent = "Buen momento para salir.";
+  }
+  aviso.hidden = false;
+}
+
+function describirCielo(codigo) {
+  if (codigo === 0) {
+    return "Despejado";
+  } else if (codigo <= 3) {
+    return "Parcialmente nublado a nublado";
+  } else if (codigo === 45 || codigo === 48) {
+    return "Niebla";
+  } else if (codigo >= 51 && codigo <= 57) {
+    return "Llovizna";
+  } else if (codigo >= 61 && codigo <= 67) {
+    return "Lluvia";
+  } else if (codigo >= 71 && codigo <= 77) {
+    return "Nieve";
+  } else if (codigo >= 80 && codigo <= 82) {
+    return "Chubascos";
+  } else if (codigo >= 95) {
+    return "Tormenta";
+  }
+  return "Sin información";
+}
