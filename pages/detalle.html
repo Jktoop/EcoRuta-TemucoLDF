@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/detalle.css">
+  <script src="../js/main.js" defer></script>
 </head>
 
 <body>
@@ -85,7 +86,29 @@
         <span>Volcán</span>
         <span>Fotografía</span>
       </div>
+
+      <!-- Opcion C: mostrar / ocultar -->
+      <button type="button" class="btn-detalle" id="btn-detalle"
+        aria-expanded="false" aria-controls="detalle-extra">
+        Ver más detalle
+      </button>
+      <div id="detalle-extra" hidden>
+        <p>
+          Ubicado al pie del volcán Llaima, el parque destaca por sus bosques de
+          araucarias, la laguna Conguillío y los senderos de trekking. Se
+          recomienda llevar abrigo y revisar el clima antes de salir.
+        </p>
+      </div>
     </article>
+
+    <section class="clima" aria-labelledby="titulo-clima">
+      <h3 id="titulo-clima">Clima en la ruta</h3>
+      <p id="estado" aria-live="polite">Sin datos aún.</p>
+      <p>Temperatura: <strong id="temperatura">--</strong></p>
+      <p>Viento: <strong id="viento">--</strong></p>
+      <p>Cielo: <strong id="cielo">--</strong></p>
+      <p id="aviso-clima" hidden></p>
+    </section>
   </main>
 
 </body>
