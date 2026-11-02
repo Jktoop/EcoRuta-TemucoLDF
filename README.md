@@ -1,6 +1,6 @@
 # EcoRuta Temuco / Los Del Frente
 
-## Integrantes y roles (Sprint 1)
+## Integrantes y roles (Sprint 2)
 
 | Nombre | Rol ágil |
 |---|---|
