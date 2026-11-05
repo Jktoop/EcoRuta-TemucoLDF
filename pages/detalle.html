@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/detalle.css">
+  <script src="../js/main.js" defer></script>
 </head>
 
 <body>
@@ -24,7 +25,6 @@
     <nav class="navegacion" aria-label="Navegación principal">
       <a href="../index.html">Inicio</a>
       <a href="catalogo.html">Catálogo</a>
-      <a href="detalle.html">Detalle</a>
       <a href="contacto.html">Contacto</a>
     </nav>
 
@@ -72,14 +72,15 @@
 
   <main class="contenido">
     <article class="detalle">
-      <p class="detalle-titulo">
-        PARQUE NACIONAL CONGUILLÍO
-      </p>
-      <h1>Parque Nacional Conguillío</h1>
-      <p>
-        El Parque Nacional Conguillío es uno de los destinos naturales
-        más conocidos de La Araucanía.
-      </p>
+      <img
+        class="detalle-foto"
+        id="ruta-foto"
+        src="../img/rutas/parqueconguillio.jpg"
+        alt="Paisaje del Parque Nacional Conguillío"
+      >
+      <p class="detalle-titulo" id="ruta-categoria">NATURALEZA · TREKKING</p>
+      <h1 id="ruta-nombre">Parque Nacional Conguillío</h1>
+      <p id="ruta-descripcion">Recorre bosques de araucarias milenarias, lagunas y senderos con vistas al volcán Llaima.</p>
       <div class="tags">
         <span>Trekking</span>
         <span>Volcán</span>
@@ -87,6 +88,15 @@
       </div>
     </article>
   </main>
+
+  <footer class="pie-pagina">
+    <div>
+      <strong>EcoRuta Temuco</strong>
+      <p>Recorre La Araucanía con respeto por su naturaleza y comunidades.</p>
+    </div>
+    <p>Un proyecto de <strong>Los del Frente</strong></p>
+    <small>© 2026 EcoRuta Temuco</small>
+  </footer>
 
 </body>
 </html>

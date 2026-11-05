@@ -9,6 +9,14 @@
   line-height: 1.6;
 }
 
+.detalle-foto {
+  width: 100%;
+  max-height: 340px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
 .detalle-titulo {
   color: var(--naranja);
   font-weight: 700;
@@ -37,63 +45,3 @@
   font-size: 11px;
 }
 
-.clima {
-  background: var(--superficie);
-  border: 1px solid var(--borde);
-  border-left: 4px solid var(--naranja);
-  border-radius: 10px;
-  padding: 14px;
-  margin: 0 0 14px;
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.clima h3 {
-  font-size: 16px;
-  margin-bottom: 6px;
-}
-
-.clima strong {
-  color: var(--naranja);
-}
-
-#estado {
-  font-style: italic;
-  margin-bottom: 6px;
-}
-
-#aviso-clima {
-  margin-top: 8px;
-  padding: 8px 10px;
-  border-radius: 8px;
-  background: var(--tag-fondo);
-  border: 1px solid var(--borde);
-  font-weight: 700;
-}
-
-.btn-detalle {
-  margin-top: 12px;
-  padding: 8px 14px;
-  border: 1px solid var(--borde);
-  border-radius: 8px;
-  background: var(--tag-fondo);
-  color: inherit;
-  font: inherit;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.btn-detalle:focus-visible {
-  outline: 2px solid var(--naranja);
-  outline-offset: 2px;
-}
-
-#detalle-extra {
-  margin-top: 10px;
-}
-
-@media (min-width: 768px) {
-  .clima {
-    max-width: 480px;
-  }
-}
