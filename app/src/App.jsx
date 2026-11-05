@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Encabezado
-        enlaces={["Inicio", "Rutas", "Contacto"]}
+        enlaces={["Inicio", "Catálogo", "Contacto"]}
         paginaActual="Inicio"
       />
       <main>
