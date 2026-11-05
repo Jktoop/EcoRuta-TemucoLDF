@@ -73,7 +73,7 @@ if (detalleRuta) {
   document.querySelector("#ruta-categoria").textContent = ruta.categoria;
   document.querySelector("#ruta-descripcion").textContent = ruta.descripcion;
   const foto = document.querySelector("#ruta-foto");
-  foto.src = `../img/${ruta.imagen}`;
+  foto.src = `../img/rutas/${ruta.imagen}`;
   foto.alt = ruta.alt;
   document.querySelector(".detalle .tags").replaceChildren(...ruta.etiquetas.map((etiqueta) => {
     const tag = document.createElement("span");
