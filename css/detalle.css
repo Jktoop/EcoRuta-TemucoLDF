@@ -44,25 +44,4 @@
   padding: 3px 10px;
   font-size: 11px;
 }
-.btn-detalle {
-  margin-top: 12px;
-  padding: 8px 14px;
-  border: 1px solid var(--borde);
-  border-radius: 8px;
-  background: var(--tag-fondo);
-  color: inherit;
-  font: inherit;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.btn-detalle:focus-visible {
-  outline: 2px solid var(--naranja);
-  outline-offset: 2px;
-}
-
-#detalle-extra {
-  margin-top: 10px;
-}
-
 

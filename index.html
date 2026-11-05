@@ -6,6 +6,7 @@
   <title>EcoRuta Temuco - Rutas sostenibles</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/home.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="barra">
@@ -23,6 +24,16 @@
     <section class="inicio-hero" aria-labelledby="hero-titulo">
       <div class="hero-copy"><p class="etiqueta">DESCUBRE LA ARAUCANÍA</p><h1 id="hero-titulo">Cada ruta deja huella. Que sea una huella sostenible.</h1><p>Explora paisajes, cultura y sabores locales viajando con respeto por la naturaleza y las comunidades de La Araucanía.</p><a class="boton-hero" href="pages/catalogo.html">Explorar rutas <span aria-hidden="true">→</span></a></div>
       <aside class="buscador-rutas" aria-labelledby="buscar-titulo"><h2 id="buscar-titulo">Encuentra tu próxima ruta</h2><label for="busqueda-ruta">Buscar por nombre o lugar</label><form action="pages/catalogo.html" method="get"><input id="busqueda-ruta" name="q" type="search" placeholder="Ej. Conguillío" autocomplete="off"><button type="submit" aria-label="Buscar rutas">Buscar</button></form><p>O descubre todos los destinos del catálogo.</p></aside>
+      <section class="clima" aria-labelledby="titulo-clima">
+        <div class="clima-encabezado"><span class="clima-icono" aria-hidden="true">☀️</span><div><p class="clima-etiqueta">ANTES DE SALIR</p><h2 id="titulo-clima">Clima en La Araucanía</h2></div></div>
+        <button type="button" class="btn-detalle" id="btn-detalle-clima" aria-expanded="false" aria-controls="detalle-clima">Ver detalle del clima</button>
+        <div id="detalle-clima" class="detalle-clima" hidden>
+          <p id="estado" class="clima-estado" aria-live="polite">Consultando el clima actual…</p>
+          <div class="clima-datos"><p><span>Temperatura</span><strong id="temperatura">--</strong></p><p><span>Viento</span><strong id="viento">--</strong></p><p><span>Cielo</span><strong id="cielo">--</strong></p></div>
+          <p id="aviso-clima" class="aviso-clima" hidden></p>
+          <p class="clima-fuente">Datos actuales de Open-Meteo</p>
+        </div>
+      </section>
     </section>
 
     <section class="rutas-destacadas" aria-labelledby="destacadas-titulo"><div class="seccion-encabezado"><p class="etiqueta">INSPIRACIÓN PARA TU VIAJE</p><h2 id="destacadas-titulo">Rutas más destacadas</h2><p>Algunos de los lugares favoritos para comenzar a explorar.</p></div>
@@ -39,5 +50,6 @@
       <article class="negocio"><span class="negocio-icono" aria-hidden="true">🚲</span><div><p class="negocio-tipo">TURISMO RESPONSABLE</p><h3>Experiencias guiadas</h3><p>Encuentra propuestas de emprendedores para recorrer la naturaleza con cuidado.</p></div></article>
     </div></section>
   </main>
+  <footer class="pie-pagina"><div><strong>EcoRuta Temuco</strong><p>Recorre La Araucanía con respeto por su naturaleza y comunidades.</p></div><p>Un proyecto de <strong>Los del Frente</strong></p><small>© 2026 EcoRuta Temuco</small></footer>
 </body>
 </html>

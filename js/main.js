@@ -1,13 +1,56 @@
-const botonDetalle = document.querySelector("#btn-detalle");
-const detalleExtra = document.querySelector("#detalle-extra");
+const botonDetalle = document.querySelector("#btn-detalle-clima");
+const detalleExtra = document.querySelector("#detalle-clima");
 
 if (botonDetalle && detalleExtra) {
   botonDetalle.addEventListener("click", () => {
     const expandido = botonDetalle.getAttribute("aria-expanded") === "true";
     botonDetalle.setAttribute("aria-expanded", String(!expandido));
     detalleExtra.hidden = expandido;
-    botonDetalle.textContent = expandido ? "Ver más detalle" : "Ver menos detalle";
+    botonDetalle.textContent = expandido ? "Ver detalle del clima" : "Ocultar detalle del clima";
   });
+}
+
+const estadoClima = document.querySelector("#estado");
+if (estadoClima) {
+  const urlClima = "https://api.open-meteo.com/v1/forecast?latitude=-38.66&longitude=-71.66&current=temperature_2m,wind_speed_10m,weather_code&timezone=America%2FSantiago";
+  const describirCielo = (codigo) => {
+    if (codigo === 0) return "Despejado";
+    if (codigo <= 3) return "Parcialmente nublado";
+    if (codigo === 45 || codigo === 48) return "Niebla";
+    if (codigo >= 51 && codigo <= 57) return "Llovizna";
+    if (codigo >= 61 && codigo <= 67) return "Lluvia";
+    if (codigo >= 71 && codigo <= 77) return "Nieve";
+    if (codigo >= 80 && codigo <= 82) return "Chubascos";
+    if (codigo >= 95) return "Tormenta";
+    return "Sin información";
+  };
+
+  const cargarClima = async () => {
+    try {
+      const respuesta = await fetch(urlClima);
+      if (!respuesta.ok) throw new Error("No se pudo consultar el clima");
+      const datos = await respuesta.json();
+      const actual = datos.current;
+      document.querySelector("#temperatura").textContent = `${actual.temperature_2m} °C`;
+      document.querySelector("#viento").textContent = `${actual.wind_speed_10m} km/h`;
+      document.querySelector("#cielo").textContent = describirCielo(actual.weather_code);
+      estadoClima.textContent = "Condiciones actuales";
+
+      const aviso = document.querySelector("#aviso-clima");
+      if (actual.temperature_2m < 8) {
+        aviso.textContent = "Hace frío: lleva abrigo.";
+      } else if (actual.wind_speed_10m > 40) {
+        aviso.textContent = "Viento fuerte: toma precauciones en zonas expuestas.";
+      } else {
+        aviso.textContent = "Recuerda cuidar los senderos y llevarte tus residuos.";
+      }
+      aviso.hidden = false;
+    } catch {
+      estadoClima.textContent = "No pudimos cargar el clima. Intenta nuevamente más tarde.";
+    }
+  };
+
+  cargarClima();
 }
 
 const rutas = {
@@ -37,8 +80,6 @@ if (detalleRuta) {
     tag.textContent = etiqueta;
     return tag;
   }));
-  const textoExtra = document.querySelector("#detalle-extra p");
-  textoExtra.textContent = ruta.descripcion;
 }
 
 const filtro = document.querySelector("#filtro-catalogo");
