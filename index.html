@@ -10,46 +10,210 @@
 </head>
 <body>
   <header class="barra">
-    <a class="marca" href="index.html" aria-label="EcoRuta, inicio"><span class="logo">🌳</span><span><strong>EcoRuta</strong><small>TEMUCO · CL</small></span></a>
-    <nav class="navegacion" aria-label="Navegación principal"><a href="index.html" aria-current="page">Inicio</a><a href="pages/catalogo.html">Catálogo</a><a href="pages/contacto.html">Contacto</a></nav>
+    <a class="marca" href="index.html" aria-label="EcoRuta, inicio">
+      <span class="logo">🌳</span>
+      <span>
+        <strong>EcoRuta</strong>
+        <small>TEMUCO · CL</small>
+      </span>
+    </a>
+
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a href="index.html" aria-current="page">Inicio</a>
+      <a href="pages/catalogo.html">Catálogo</a>
+      <a href="pages/contacto.html">Contacto</a>
+    </nav>
+
     <div class="barra-derecha">
       <input class="tema-checkbox" type="checkbox" id="tema-oscuro">
-      <label class="tema-control" for="tema-oscuro"><span class="icono-sol" aria-hidden="true">☀️</span><span class="icono-luna" aria-hidden="true">🌙</span><span class="texto-cambiar-oscuro">Tema oscuro</span><span class="texto-cambiar-claro">Tema claro</span></label>
-      <span class="puntos"><i class="p1"></i><i class="p2"></i><i class="p3"></i></span>
-      <details class="language-dropdown"><summary class="dropdown-toggle" aria-label="Cambiar idioma"><span>🇨🇱</span> <span>CL ES</span> <span class="arrow">▼</span></summary><ul class="dropdown-menu" role="menu"><li><button class="dropdown-item active" role="menuitem" type="button">🇨🇱 Español (CL)</button></li><li><button class="dropdown-item" role="menuitem" type="button">🇬🇧 English (UK)</button></li><li><button class="dropdown-item" role="menuitem" type="button">🇧🇷 Português (BR)</button></li></ul></details>
+      <label class="tema-control" for="tema-oscuro">
+        <span class="icono-sol" aria-hidden="true">☀️</span>
+        <span class="icono-luna" aria-hidden="true">🌙</span>
+        <span class="texto-cambiar-oscuro">Tema oscuro</span>
+        <span class="texto-cambiar-claro">Tema claro</span>
+      </label>
+
+      <span class="puntos">
+        <i class="p1"></i>
+        <i class="p2"></i>
+        <i class="p3"></i>
+      </span>
+
+      <details class="language-dropdown">
+        <summary class="dropdown-toggle" aria-label="Cambiar idioma">
+          <span>🇨🇱</span>
+          <span>CL ES</span>
+          <span class="arrow">▼</span>
+        </summary>
+        <ul class="dropdown-menu" role="menu">
+          <li>
+            <button class="dropdown-item active" role="menuitem" type="button">
+              🇨🇱 Español (CL)
+            </button>
+          </li>
+          <li>
+            <button class="dropdown-item" role="menuitem" type="button">
+              🇬🇧 English (UK)
+            </button>
+          </li>
+          <li>
+            <button class="dropdown-item" role="menuitem" type="button">
+              🇧🇷 Português (BR)
+            </button>
+          </li>
+        </ul>
+      </details>
     </div>
   </header>
 
   <main class="contenido">
     <section class="inicio-hero" aria-labelledby="hero-titulo">
-      <div class="hero-copy"><p class="etiqueta">DESCUBRE LA ARAUCANÍA</p><h1 id="hero-titulo">Cada ruta deja huella. Que sea una huella sostenible.</h1><p>Explora paisajes, cultura y sabores locales viajando con respeto por la naturaleza y las comunidades de La Araucanía.</p><a class="boton-hero" href="pages/catalogo.html">Explorar rutas <span aria-hidden="true">→</span></a></div>
-      <aside class="buscador-rutas" aria-labelledby="buscar-titulo"><h2 id="buscar-titulo">Encuentra tu próxima ruta</h2><label for="busqueda-ruta">Buscar por nombre o lugar</label><form action="pages/catalogo.html" method="get"><input id="busqueda-ruta" name="q" type="search" placeholder="Ej. Conguillío" autocomplete="off"><button type="submit" aria-label="Buscar rutas">Buscar</button></form><p>O descubre todos los destinos del catálogo.</p></aside>
+      <div class="hero-copy">
+        <p class="etiqueta">DESCUBRE LA ARAUCANÍA</p>
+        <h1 id="hero-titulo">Cada ruta deja huella. Que sea una huella sostenible.</h1>
+        <p>
+          Explora paisajes, cultura y sabores locales viajando con respeto por la
+          naturaleza y las comunidades de La Araucanía.
+        </p>
+        <a class="boton-hero" href="pages/catalogo.html">
+          Explorar rutas <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <aside class="buscador-rutas" aria-labelledby="buscar-titulo">
+        <h2 id="buscar-titulo">Encuentra tu próxima ruta</h2>
+        <label for="busqueda-ruta">Buscar por nombre o lugar</label>
+        <form action="pages/catalogo.html" method="get">
+          <input
+            id="busqueda-ruta"
+            name="q"
+            type="search"
+            placeholder="Ej. Conguillío"
+            autocomplete="off"
+          >
+          <button type="submit" aria-label="Buscar rutas">Buscar</button>
+        </form>
+        <p>O descubre todos los destinos del catálogo.</p>
+      </aside>
+
       <section class="clima" aria-labelledby="titulo-clima">
-        <div class="clima-encabezado"><span class="clima-icono" aria-hidden="true">☀️</span><div><p class="clima-etiqueta">ANTES DE SALIR</p><h2 id="titulo-clima">Clima en La Araucanía</h2></div></div>
-        <button type="button" class="btn-detalle" id="btn-detalle-clima" aria-expanded="false" aria-controls="detalle-clima">Ver detalle del clima</button>
+        <div class="clima-encabezado">
+          <span class="clima-icono" aria-hidden="true">☀️</span>
+          <div>
+            <p class="clima-etiqueta">ANTES DE SALIR</p>
+            <h2 id="titulo-clima">Clima en La Araucanía</h2>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="btn-detalle"
+          id="btn-detalle-clima"
+          aria-expanded="false"
+          aria-controls="detalle-clima"
+        >
+          Ver detalle del clima
+        </button>
+
         <div id="detalle-clima" class="detalle-clima" hidden>
-          <p id="estado" class="clima-estado" aria-live="polite">Consultando el clima actual…</p>
-          <div class="clima-datos"><p><span>Temperatura</span><strong id="temperatura">--</strong></p><p><span>Viento</span><strong id="viento">--</strong></p><p><span>Cielo</span><strong id="cielo">--</strong></p></div>
+          <p id="estado" class="clima-estado" aria-live="polite">
+            Consultando el clima actual…
+          </p>
+          <div class="clima-datos">
+            <p><span>Temperatura</span><strong id="temperatura">--</strong></p>
+            <p><span>Viento</span><strong id="viento">--</strong></p>
+            <p><span>Cielo</span><strong id="cielo">--</strong></p>
+          </div>
           <p id="aviso-clima" class="aviso-clima" hidden></p>
           <p class="clima-fuente">Datos actuales de Open-Meteo</p>
         </div>
       </section>
     </section>
 
-    <section class="rutas-destacadas" aria-labelledby="destacadas-titulo"><div class="seccion-encabezado"><p class="etiqueta">INSPIRACIÓN PARA TU VIAJE</p><h2 id="destacadas-titulo">Rutas más destacadas</h2><p>Algunos de los lugares favoritos para comenzar a explorar.</p></div>
+    <section class="rutas-destacadas" aria-labelledby="destacadas-titulo">
+      <div class="seccion-encabezado">
+        <p class="etiqueta">INSPIRACIÓN PARA TU VIAJE</p>
+        <h2 id="destacadas-titulo">Rutas más destacadas</h2>
+        <p>Algunos de los lugares favoritos para comenzar a explorar.</p>
+      </div>
+
       <div class="top3">
-        <a class="destacado n1" href="pages/detalle.html?ruta=conguillio"><img class="foto" src="img/parqueconguillio.jpg" alt="Araucarias y paisaje del Parque Nacional Conguillío"><span class="chip">🌿 Naturaleza</span><div class="info"><h3>Parque Nacional Conguillío</h3><p>Senderos entre araucarias, lagunas y volcanes.</p></div></a>
-        <a class="destacado n2" href="pages/detalle.html?ruta=villarrica"><img class="foto" src="img/volcanvillarrica.jpg" alt="Volcán Villarrica"><div class="info"><h3>Volcán Villarrica</h3><p>Aventura y vistas inolvidables.</p></div></a>
-        <a class="destacado n3" href="pages/detalle.html?ruta=nielol"><img class="foto" src="img/mirador.jpg" alt="Mirador del cerro Ñielol"><div class="info"><h3>Cerro Ñielol</h3><p>Naturaleza a pasos de Temuco.</p></div></a>
+        <a class="destacado n1" href="pages/detalle.html?ruta=conguillio">
+          <img
+            class="foto"
+            src="img/parqueconguillio.jpg"
+            alt="Araucarias y paisaje del Parque Nacional Conguillío"
+          >
+          <span class="chip">🌿 Naturaleza</span>
+          <div class="info">
+            <h3>Parque Nacional Conguillío</h3>
+            <p>Senderos entre araucarias, lagunas y volcanes.</p>
+          </div>
+        </a>
+
+        <a class="destacado n2" href="pages/detalle.html?ruta=villarrica">
+          <img class="foto" src="img/volcanvillarrica.jpg" alt="Volcán Villarrica">
+          <div class="info">
+            <h3>Volcán Villarrica</h3>
+            <p>Aventura y vistas inolvidables.</p>
+          </div>
+        </a>
+
+        <a class="destacado n3" href="pages/detalle.html?ruta=nielol">
+          <img class="foto" src="img/mirador.jpg" alt="Mirador del cerro Ñielol">
+          <div class="info">
+            <h3>Cerro Ñielol</h3>
+            <p>Naturaleza a pasos de Temuco.</p>
+          </div>
+        </a>
       </div>
     </section>
 
-    <section class="emprendimientos" aria-labelledby="emprendimientos-titulo"><div class="seccion-encabezado"><p class="etiqueta">COMPRA LOCAL, VIAJA MEJOR</p><h2 id="emprendimientos-titulo">Negocios de emprendedores</h2><p>Conoce iniciativas locales para complementar tu recorrido.</p></div><div class="negocios-lista">
-      <article class="negocio"><span class="negocio-icono" aria-hidden="true">🧺</span><div><p class="negocio-tipo">ARTESANÍA LOCAL</p><h3>Artesanía de La Araucanía</h3><p>Descubre piezas y tejidos elaborados por emprendedores de la región.</p></div></article>
-      <article class="negocio"><span class="negocio-icono" aria-hidden="true">🍯</span><div><p class="negocio-tipo">SABORES LOCALES</p><h3>Sabores de La Araucanía</h3><p>Conoce productos y preparaciones de pequeños negocios locales.</p></div></article>
-      <article class="negocio"><span class="negocio-icono" aria-hidden="true">🚲</span><div><p class="negocio-tipo">TURISMO RESPONSABLE</p><h3>Experiencias guiadas</h3><p>Encuentra propuestas de emprendedores para recorrer la naturaleza con cuidado.</p></div></article>
-    </div></section>
+    <section class="emprendimientos" aria-labelledby="emprendimientos-titulo">
+      <div class="seccion-encabezado">
+        <p class="etiqueta">COMPRA LOCAL, VIAJA MEJOR</p>
+        <h2 id="emprendimientos-titulo">Negocios de emprendedores</h2>
+        <p>Conoce iniciativas locales para complementar tu recorrido.</p>
+      </div>
+
+      <div class="negocios-lista">
+        <article class="negocio">
+          <span class="negocio-icono" aria-hidden="true">🧺</span>
+          <div>
+            <p class="negocio-tipo">ARTESANÍA LOCAL</p>
+            <h3>Artesanía de La Araucanía</h3>
+            <p>Descubre piezas y tejidos elaborados por emprendedores de la región.</p>
+          </div>
+        </article>
+
+        <article class="negocio">
+          <span class="negocio-icono" aria-hidden="true">🍯</span>
+          <div>
+            <p class="negocio-tipo">SABORES LOCALES</p>
+            <h3>Sabores de La Araucanía</h3>
+            <p>Conoce productos y preparaciones de pequeños negocios locales.</p>
+          </div>
+        </article>
+
+        <article class="negocio">
+          <span class="negocio-icono" aria-hidden="true">🚲</span>
+          <div>
+            <p class="negocio-tipo">TURISMO RESPONSABLE</p>
+            <h3>Experiencias guiadas</h3>
+            <p>Encuentra propuestas de emprendedores para recorrer la naturaleza con cuidado.</p>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
-  <footer class="pie-pagina"><div><strong>EcoRuta Temuco</strong><p>Recorre La Araucanía con respeto por su naturaleza y comunidades.</p></div><p>Un proyecto de <strong>Los del Frente</strong></p><small>© 2026 EcoRuta Temuco</small></footer>
+
+  <footer class="pie-pagina">
+    <div>
+      <strong>EcoRuta Temuco</strong>
+      <p>Recorre La Araucanía con respeto por su naturaleza y comunidades.</p>
+    </div>
+    <p>Un proyecto de <strong>Los del Frente</strong></p>
+    <small>© 2026 EcoRuta Temuco</small>
+  </footer>
 </body>
 </html>
