@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EcoRuta Temuco - Catálogo</title>
-
+  <title>EcoRuta Temuco - Catálogo de rutas</title>
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/catalogo.css">
+  <script src="../js/main.js" defer></script>
 </head>
-
 <body>
-
   <header class="barra">
-    <div class="marca">
+    <a class="marca" href="../index.html" aria-label="EcoRuta, inicio">
       <span class="logo">🌳</span>
-      <div>
+      <span>
         <strong>EcoRuta</strong>
         <small>TEMUCO · CL</small>
-      </div>
-    </div>
+      </span>
+    </a>
 
     <nav class="navegacion" aria-label="Navegación principal">
       <a href="../index.html">Inicio</a>
-      <a href="catalogo.html">Catálogo</a>
-      <a href="detalle.html">Detalle</a>
+      <a href="catalogo.html" aria-current="page">Catálogo</a>
       <a href="contacto.html">Contacto</a>
     </nav>
 
@@ -36,33 +32,33 @@
         <span class="texto-cambiar-oscuro">Tema oscuro</span>
         <span class="texto-cambiar-claro">Tema claro</span>
       </label>
+
       <span class="puntos">
         <i class="p1"></i>
         <i class="p2"></i>
         <i class="p3"></i>
       </span>
 
-      <!-- Selector de idioma interactivo -->
       <details class="language-dropdown">
         <summary class="dropdown-toggle" aria-label="Cambiar idioma">
-          <span>🇨🇱</span> 
+          <span>🇨🇱</span>
           <span>CL ES</span>
           <span class="arrow">▼</span>
         </summary>
         <ul class="dropdown-menu" role="menu">
           <li>
             <button class="dropdown-item active" role="menuitem" type="button">
-              <span>🇨🇱</span> Español (CL)
+              🇨🇱 Español (CL)
             </button>
           </li>
           <li>
             <button class="dropdown-item" role="menuitem" type="button">
-              <span>🇬🇧</span> English (UK)
+              🇬🇧 English (UK)
             </button>
           </li>
           <li>
             <button class="dropdown-item" role="menuitem" type="button">
-              <span>🇧🇷</span> Português (BR)
+              🇧🇷 Português (BR)
             </button>
           </li>
         </ul>
@@ -70,40 +66,153 @@
     </div>
   </header>
 
-  <main class="contenido">
-    <section>
+  <main class="contenido catalogo-contenido">
+    <section class="catalogo-intro">
+      <p class="etiqueta">PLANIFICA TU RECORRIDO</p>
       <h1>Catálogo de rutas</h1>
-      <p>
-        Explora distintos destinos turísticos de La Araucanía.
-      </p>
+      <p>Encuentra tu próximo destino y conoce qué hace especial cada lugar.</p>
+      <form class="filtro-rutas" role="search">
+        <input
+          id="filtro-catalogo"
+          type="search"
+          aria-label="Buscar una ruta"
+          placeholder="Buscar una ruta…"
+          autocomplete="off"
+        >
+        <span
+          id="resultado-busqueda"
+          class="visualmente-oculto"
+          aria-live="polite"
+        ></span>
+      </form>
     </section>
 
-    <section class="lista">
-      <article class="mini">
-        <div class="mini-texto">
+    <section class="lista rutas-lista" aria-label="Todas las rutas">
+      <a
+        class="ruta-card"
+        href="detalle.html?ruta=conguillio"
+        data-search="parque nacional conguillio naturaleza trekking araucarias"
+      >
+        <img src="../img/rutas/parqueconguillio.jpg" alt="Paisaje del Parque Nacional Conguillío">
+        <div class="ruta-info">
+          <span class="ruta-categoria">NATURALEZA · TREKKING</span>
           <h2>Parque Nacional Conguillío</h2>
-          <p>🌿 Naturaleza y trekking</p>
-          <a href="detalle.html">Ver detalle</a>
+          <p>Recorre bosques de araucarias milenarias, lagunas y senderos con vistas al volcán Llaima.</p>
+          <span class="ruta-link">Ver detalle <span aria-hidden="true">→</span></span>
         </div>
-      </article>
+      </a>
 
-      <article class="mini">
-        <div class="mini-texto">
+      <a
+        class="ruta-card"
+        href="detalle.html?ruta=villarrica"
+        data-search="volcan villarrica naturaleza aventura"
+      >
+        <img src="../img/rutas/volcanvillarrica.jpg" alt="Volcán Villarrica">
+        <div class="ruta-info">
+          <span class="ruta-categoria">MONTAÑA · AVENTURA</span>
           <h2>Volcán Villarrica</h2>
-          <p>🏔️ Naturaleza y aventura</p>
-          <a href="detalle.html">Ver detalle</a>
+          <p>Un paisaje volcánico emblemático, con alternativas para admirar la montaña y su entorno.</p>
+          <span class="ruta-link">Ver detalle <span aria-hidden="true">→</span></span>
         </div>
-      </article>
+      </a>
 
-      <article class="mini">
-        <div class="mini-texto">
-          <h2>Cerro Ñielol</h2>
-          <p>🌳 Naturaleza y senderismo</p>
-          <a href="detalle.html">Ver detalle</a>
+      <a
+        class="ruta-card"
+        href="detalle.html?ruta=museo"
+        data-search="museo regional araucania cultura historia"
+      >
+        <img src="../img/rutas/museo.jpg" alt="Museo Regional de La Araucanía">
+        <div class="ruta-info">
+          <span class="ruta-categoria">CULTURA · HISTORIA</span>
+          <h2>Museo Regional de La Araucanía</h2>
+          <p>Conoce la historia y el patrimonio cultural de la región en una visita por Temuco.</p>
+          <span class="ruta-link">Ver detalle <span aria-hidden="true">→</span></span>
         </div>
-      </article>
+      </a>
+
+      <a
+        class="ruta-card"
+        href="detalle.html?ruta=mercado"
+        data-search="mercado municipal temuco gastronomia cultura"
+      >
+        <img src="../img/rutas/mercado.jpeg" alt="Mercado Municipal de Temuco">
+        <div class="ruta-info">
+          <span class="ruta-categoria">CULTURA · GASTRONOMÍA</span>
+          <h2>Mercado Municipal de Temuco</h2>
+          <p>Un punto de encuentro para descubrir productos, cocina y vida local.</p>
+          <span class="ruta-link">Ver detalle <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+      <a
+        class="ruta-card"
+        href="detalle.html?ruta=lagovillarrica"
+        data-search="lago villarrica agua paisaje naturaleza"
+      >
+        <img src="../img/rutas/lagovillarrica.jpg" alt="Lago Villarrica">
+        <div class="ruta-info">
+          <span class="ruta-categoria">LAGO · NATURALEZA</span>
+          <h2>Lago Villarrica</h2>
+          <p>Disfruta del paisaje lacustre y de las vistas abiertas hacia el volcán Villarrica.</p>
+          <span class="ruta-link">Ver detalle <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+      <a
+        class="ruta-card"
+        href="detalle.html?ruta=islacautin"
+        data-search="parque isla cautin temuco parque naturaleza"
+      >
+        <img src="../img/rutas/islacautin.jpg" alt="Parque Isla Cautín">
+        <div class="ruta-info">
+          <span class="ruta-categoria">PARQUE · TEMUCO</span>
+          <h2>Parque Isla Cautín</h2>
+          <p>Un espacio verde junto al río para caminar, descansar y disfrutar al aire libre.</p>
+          <span class="ruta-link">Ver detalle <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+      <a
+        class="ruta-card"
+        href="detalle.html?ruta=bosquepehuen"
+        data-search="bosque pehuen araucarias naturaleza"
+      >
+        <img src="../img/rutas/bosquepehuen.jpeg" alt="Bosque Pehuén">
+        <div class="ruta-info">
+          <span class="ruta-categoria">BOSQUE · NATURALEZA</span>
+          <h2>Bosque Pehuén</h2>
+          <p>Adéntrate en un entorno de bosque nativo y conoce de cerca el paisaje del pehuén.</p>
+          <span class="ruta-link">Ver detalle <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+      <a
+        class="ruta-card"
+        href="detalle.html?ruta=nielol"
+        data-search="mirador cerro nielol temuco senderismo naturaleza"
+      >
+        <img src="../img/rutas/mirador.jpg" alt="Mirador del cerro Ñielol">
+        <div class="ruta-info">
+          <span class="ruta-categoria">MIRADOR · SENDERISMO</span>
+          <h2>Mirador Cerro Ñielol</h2>
+          <p>Camina entre vegetación nativa y contempla Temuco desde uno de sus miradores.</p>
+          <span class="ruta-link">Ver detalle <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
     </section>
+
+    <p class="sin-resultados" id="sin-resultados" hidden>
+      No encontramos rutas con esa búsqueda. Prueba con otro nombre o lugar.
+    </p>
   </main>
 
+  <footer class="pie-pagina">
+    <div>
+      <strong>EcoRuta Temuco</strong>
+      <p>Recorre La Araucanía con respeto por su naturaleza y comunidades.</p>
+    </div>
+    <p>Un proyecto de <strong>Los del Frente</strong></p>
+    <small>© 2026 EcoRuta Temuco</small>
+  </footer>
 </body>
 </html>

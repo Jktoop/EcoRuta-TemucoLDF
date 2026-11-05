@@ -3,26 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EcoRuta Temuco - Lo Más Visitado</title>
-
+  <title>EcoRuta Temuco - Rutas sostenibles</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/home.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-
   <header class="barra">
-    <div class="marca">
+    <a class="marca" href="index.html" aria-label="EcoRuta, inicio">
       <span class="logo">🌳</span>
-      <div>
+      <span>
         <strong>EcoRuta</strong>
         <small>TEMUCO · CL</small>
-      </div>
-    </div>
+      </span>
+    </a>
 
     <nav class="navegacion" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
+      <a href="index.html" aria-current="page">Inicio</a>
       <a href="pages/catalogo.html">Catálogo</a>
-      <a href="pages/detalle.html">Detalle</a>
       <a href="pages/contacto.html">Contacto</a>
     </nav>
 
@@ -34,100 +32,188 @@
         <span class="texto-cambiar-oscuro">Tema oscuro</span>
         <span class="texto-cambiar-claro">Tema claro</span>
       </label>
+
       <span class="puntos">
-        <i class="p1"></i><i class="p2"></i><i class="p3"></i>
+        <i class="p1"></i>
+        <i class="p2"></i>
+        <i class="p3"></i>
       </span>
 
-      <!-- Selector de idioma interactivo -->
       <details class="language-dropdown">
         <summary class="dropdown-toggle" aria-label="Cambiar idioma">
-          <span>🇨🇱</span> <span>CL ES</span> <span class="arrow">▼</span>
+          <span>🇨🇱</span>
+          <span>CL ES</span>
+          <span class="arrow">▼</span>
         </summary>
         <ul class="dropdown-menu" role="menu">
-          <li><button class="dropdown-item active" role="menuitem" type="button"><span>🇨🇱</span> Español (CL)</button></li>
-          <li><button class="dropdown-item" role="menuitem" type="button"><span>🇬🇧</span> English (UK)</button></li>
-          <li><button class="dropdown-item" role="menuitem" type="button"><span>🇧🇷</span> Português (BR)</button></li>
+          <li>
+            <button class="dropdown-item active" role="menuitem" type="button">
+              🇨🇱 Español (CL)
+            </button>
+          </li>
+          <li>
+            <button class="dropdown-item" role="menuitem" type="button">
+              🇬🇧 English (UK)
+            </button>
+          </li>
+          <li>
+            <button class="dropdown-item" role="menuitem" type="button">
+              🇧🇷 Português (BR)
+            </button>
+          </li>
         </ul>
       </details>
     </div>
   </header>
-  
-  <section class="banner">
-    <div>
-      <p class="etiqueta">🔥 TENDENCIA</p>
-      <h1>Lo Más Visitado</h1>
-      <p class="sub">Los destinos favoritos de los viajeros en La Araucanía</p>
-    </div>
-    <span class="trofeo">🏆</span>
-  </section>
 
   <main class="contenido">
-    <section class="top3">
-      <article class="destacado n1">
-        <img class="foto" src="img/parqueconguillio.jpg" alt="Parque Nacional Conguillío">
-        <span class="medalla oro">1</span>
-        <span class="chip">🌿 naturaleza</span>
-        <div class="info">
-          <h2>Parque Nacional Conguillío</h2>
-          <p class="estrellas">★★★★★ <b>4.9</b></p>
-          <p class="visitas">👁 48.3k visitas</p>
-        </div>
-      </article>
+    <section class="inicio-hero" aria-labelledby="hero-titulo">
+      <div class="hero-copy">
+        <p class="etiqueta">DESCUBRE LA ARAUCANÍA</p>
+        <h1 id="hero-titulo">Cada ruta deja huella. Que sea una huella sostenible.</h1>
+        <p>
+          Explora paisajes, cultura y sabores locales viajando con respeto por la
+          naturaleza y las comunidades de La Araucanía.
+        </p>
+        <a class="boton-hero" href="pages/catalogo.html">
+          Explorar rutas <span aria-hidden="true">→</span>
+        </a>
+      </div>
 
-      <article class="destacado n2">
-        <img class="foto" src="img/volcanvillarrica.jpg" alt="Volcán Villarrica">
-        <span class="medalla plata">2</span>
-        <div class="info">
-          <h2>Volcán Villarrica</h2>
-          <p class="estrellas">★★★★★★ <b>4.8</b></p>
-          <p class="visitas">👁 35.1k visitas</p>
-        </div>
-      </article>
+      <aside class="buscador-rutas" aria-labelledby="buscar-titulo">
+        <h2 id="buscar-titulo">Encuentra tu próxima ruta</h2>
+        <label for="busqueda-ruta">Buscar por nombre o lugar</label>
+        <form action="pages/catalogo.html" method="get">
+          <input
+            id="busqueda-ruta"
+            name="q"
+            type="search"
+            placeholder="Ej. Conguillío"
+            autocomplete="off"
+          >
+          <button type="submit" aria-label="Buscar rutas">Buscar</button>
+        </form>
+        <p>O descubre todos los destinos del catálogo.</p>
+      </aside>
 
-      <article class="destacado n3">
-        <img class="foto" src="img/museo.jpg" alt="Museo Regional de la Araucanía">
-        <span class="medalla bronce">3</span>
-        <div class="info">
-          <h2>Museo Regional de la Araucanía</h2>
-          <p class="estrellas">★★★★⯪ <b>4.6</b></p>
-          <p class="visitas">👁 29.8k visitas</p>
+      <section class="clima" aria-labelledby="titulo-clima">
+        <div class="clima-encabezado">
+          <span class="clima-icono" aria-hidden="true">☀️</span>
+          <div>
+            <p class="clima-etiqueta">ANTES DE SALIR</p>
+            <h2 id="titulo-clima">Clima en La Araucanía</h2>
+          </div>
         </div>
-      </article>
+
+        <button
+          type="button"
+          class="btn-detalle"
+          id="btn-detalle-clima"
+          aria-expanded="false"
+          aria-controls="detalle-clima"
+        >
+          Ver detalle del clima
+        </button>
+
+        <div id="detalle-clima" class="detalle-clima" hidden>
+          <p id="estado" class="clima-estado" aria-live="polite">
+            Consultando el clima actual…
+          </p>
+          <div class="clima-datos">
+            <p><span>Temperatura</span><strong id="temperatura">--</strong></p>
+            <p><span>Viento</span><strong id="viento">--</strong></p>
+            <p><span>Cielo</span><strong id="cielo">--</strong></p>
+          </div>
+          <p id="aviso-clima" class="aviso-clima" hidden></p>
+          <p class="clima-fuente">Datos actuales de Open-Meteo</p>
+        </div>
+      </section>
     </section>
 
-    <section class="detalle">
-      <p class="detalle-titulo">🥇 N°1 — PARQUE NACIONAL CONGUILLÍO</p>
-      <p>El parque más icónico de La Araucanía. Araucarias milenarias, el volcán Llaima activo y el espectacular lago Conguillío hacen de este destino imperdible para senderistas, fotógrafos y amantes de la naturaleza.</p>
-      <div class="tags">
-        <span>Trekking</span><span>Volcán</span><span>Kayak</span><span>Fotografía</span>
+    <section class="rutas-destacadas" aria-labelledby="destacadas-titulo">
+      <div class="seccion-encabezado">
+        <p class="etiqueta">INSPIRACIÓN PARA TU VIAJE</p>
+        <h2 id="destacadas-titulo">Rutas más destacadas</h2>
+        <p>Algunos de los lugares favoritos para comenzar a explorar.</p>
+      </div>
+
+      <div class="top3">
+        <a class="destacado n1" href="pages/detalle.html?ruta=conguillio">
+          <img
+            class="foto"
+            src="img/rutas/parqueconguillio.jpg"
+            alt="Araucarias y paisaje del Parque Nacional Conguillío"
+          >
+          <span class="chip">🌿 Naturaleza</span>
+          <div class="info">
+            <h3>Parque Nacional Conguillío</h3>
+            <p>Senderos entre araucarias, lagunas y volcanes.</p>
+          </div>
+        </a>
+
+        <a class="destacado n2" href="pages/detalle.html?ruta=villarrica">
+          <img class="foto" src="img/rutas/volcanvillarrica.jpg" alt="Volcán Villarrica">
+          <div class="info">
+            <h3>Volcán Villarrica</h3>
+            <p>Aventura y vistas inolvidables.</p>
+          </div>
+        </a>
+
+        <a class="destacado n3" href="pages/detalle.html?ruta=nielol">
+          <img class="foto" src="img/rutas/mirador.jpg" alt="Mirador del cerro Ñielol">
+          <div class="info">
+            <h3>Cerro Ñielol</h3>
+            <p>Naturaleza a pasos de Temuco.</p>
+          </div>
+        </a>
       </div>
     </section>
 
-    <h3 class="subtitulo">📍 N°4 – N°8</h3>
+    <section class="emprendimientos" aria-labelledby="emprendimientos-titulo">
+      <div class="seccion-encabezado">
+        <p class="etiqueta">COMPRA LOCAL, VIAJA MEJOR</p>
+        <h2 id="emprendimientos-titulo">Negocios de emprendedores</h2>
+        <p>Conoce iniciativas locales para complementar tu recorrido.</p>
+      </div>
 
-    <section class="lista">
-      <article class="mini">
-        <div class="mini-foto"><img src="img/mercado.jpeg" alt="Mercado Municipal"><span class="num">N°4</span></div>
-        <div class="mini-texto"><h4>Mercado Municipal de Temuco</h4><p class="estrellas">★★★★⯪ <b>4.5</b></p></div>
-      </article>
-      <article class="mini">
-        <div class="mini-foto"><img src="img/lagovillarrica.jpg" alt="Lago Villarrica"><span class="num">N°5</span></div>
-        <div class="mini-texto"><h4>Lago Villarrica</h4><p class="estrellas">★★★★⯪ <b>4.5</b></p></div>
-      </article>
-      <article class="mini">
-        <div class="mini-foto"><img src="img/islacautin.jpg" alt="Parque Isla Cautín"><span class="num">N°6</span></div>
-        <div class="mini-texto"><h4>Parque Isla Cautín</h4><p class="estrellas">★★★★⯪ <b>4.3</b></p></div>
-      </article>
-      <article class="mini">
-        <div class="mini-foto"><img src="img/bosquepehuen.jpeg" alt="Bosque Pehuén"><span class="num">N°7</span></div>
-        <div class="mini-texto"><h4>Bosque Pehuén</h4><p class="estrellas">★★★★☆ <b>4.0</b></p></div>
-      </article>
-      <article class="mini">
-        <div class="mini-foto"><img src="img/mirador.jpg" alt="Mirador Cerro Ñielol"><span class="num">N°8</span></div>
-        <div class="mini-texto"><h4>Mirador Cerro Ñielol</h4><p class="estrellas">★★★★☆ <b>4.0</b></p></div>
-      </article>
+      <div class="negocios-lista">
+        <article class="negocio">
+          <span class="negocio-icono" aria-hidden="true">🧺</span>
+          <div>
+            <p class="negocio-tipo">ARTESANÍA LOCAL</p>
+            <h3>Artesanía de La Araucanía</h3>
+            <p>Descubre piezas y tejidos elaborados por emprendedores de la región.</p>
+          </div>
+        </article>
+
+        <article class="negocio">
+          <span class="negocio-icono" aria-hidden="true">🍯</span>
+          <div>
+            <p class="negocio-tipo">SABORES LOCALES</p>
+            <h3>Sabores de La Araucanía</h3>
+            <p>Conoce productos y preparaciones de pequeños negocios locales.</p>
+          </div>
+        </article>
+
+        <article class="negocio">
+          <span class="negocio-icono" aria-hidden="true">🚲</span>
+          <div>
+            <p class="negocio-tipo">TURISMO RESPONSABLE</p>
+            <h3>Experiencias guiadas</h3>
+            <p>Encuentra propuestas de emprendedores para recorrer la naturaleza con cuidado.</p>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
+  <footer class="pie-pagina">
+    <div>
+      <strong>EcoRuta Temuco</strong>
+      <p>Recorre La Araucanía con respeto por su naturaleza y comunidades.</p>
+    </div>
+    <p>Un proyecto de <strong>Los del Frente</strong></p>
+    <small>© 2026 EcoRuta Temuco</small>
+  </footer>
 </body>
 </html>
