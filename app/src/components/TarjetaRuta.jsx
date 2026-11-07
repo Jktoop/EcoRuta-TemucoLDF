@@ -1,42 +1,48 @@
-export default function RutasDestacadas() {
+import "./TarjetaRuta.css";
+
+export default function TarjetaRuta({
+  nombre,
+  imagen,
+  alt,
+  distanciaKm,
+  dificultad,
+  accesible,
+  descripcion,
+}) {
   return (
-    <>
-      <a className="destacado n1" href="pages/detalle.html?ruta=conguillio">
-        <img
-          className="foto"
-          src="img/rutas/parqueconguillio.jpg"
-          alt="Araucarias y paisaje del Parque Nacional Conguillío"
-        />
-        <span className="chip">🌿 Naturaleza</span>
-        <div className="info">
-          <h3>Parque Nacional Conguillío</h3>
-          <p>Senderos entre araucarias, lagunas y volcanes.</p>
-        </div>
-      </a>
+    <article className="tarjeta-ruta">
+      <img className="tarjeta-ruta__imagen" src={imagen} alt={alt} loading="lazy" />
 
-      <a className="destacado n2" href="pages/detalle.html?ruta=villarrica">
-        <img
-          className="foto"
-          src="img/rutas/volcanvillarrica.jpg"
-          alt="Volcán Villarrica"
-        />
-        <div className="info">
-          <h3>Volcán Villarrica</h3>
-          <p>Aventura y vistas inolvidables.</p>
-        </div>
-      </a>
+      <div className="tarjeta-ruta__contenido">
+        <h2 className="tarjeta-ruta__nombre">{nombre}</h2>
 
-      <a className="destacado n3" href="pages/detalle.html?ruta=nielol">
-        <img
-          className="foto"
-          src="img/rutas/mirador.jpg"
-          alt="Mirador del cerro Ñielol"
-        />
-        <div className="info">
-          <h3>Cerro Ñielol</h3>
-          <p>Naturaleza a pasos de Temuco.</p>
-        </div>
-      </a>
-    </>
+        {descripcion && (
+          <p className="tarjeta-ruta__descripcion">{descripcion}</p>
+        )}
+
+        <dl className="tarjeta-ruta__datos">
+          {distanciaKm != null && (
+            <div className="tarjeta-ruta__dato">
+              <dt>Distancia</dt>
+              <dd>{distanciaKm} km</dd>
+            </div>
+          )}
+
+          {dificultad && (
+            <div className="tarjeta-ruta__dato">
+              <dt>Dificultad</dt>
+              <dd className="tarjeta-ruta__dificultad">{dificultad}</dd>
+            </div>
+          )}
+
+          {typeof accesible === "boolean" && (
+            <div className="tarjeta-ruta__dato">
+              <dt>Accesibilidad</dt>
+              <dd>{accesible ? "Accesible" : "No accesible"}</dd>
+            </div>
+          )}
+        </dl>
+      </div>
+    </article>
   );
 }
