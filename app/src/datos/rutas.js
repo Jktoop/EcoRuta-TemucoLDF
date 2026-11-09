@@ -10,6 +10,7 @@ import villarrica from "../assets/rutas/volcanvillarrica.jpg";
 export const rutas = [
   {
     id: 1,
+    categoria: "NATURALEZA · TREKKING",
     nombre: "Parque Nacional Conguillío",
     imagen: conguillio,
     alt: "Paisaje del Parque Nacional Conguillío",
@@ -18,6 +19,7 @@ export const rutas = [
   },
   {
     id: 2,
+    categoria: "MONTAÑA · AVENTURA",
     nombre: "Volcán Villarrica",
     imagen: villarrica,
     alt: "Volcán Villarrica",
@@ -26,6 +28,7 @@ export const rutas = [
   },
   {
     id: 3,
+    categoria: "CULTURA · HISTORIA",
     nombre: "Museo Regional de La Araucanía",
     imagen: museo,
     alt: "Museo Regional de La Araucanía",
@@ -34,6 +37,7 @@ export const rutas = [
   },
   {
     id: 4,
+    categoria: "CULTURA · GASTRONOMÍA",
     nombre: "Mercado Municipal de Temuco",
     imagen: mercado,
     alt: "Mercado Municipal de Temuco",
@@ -42,6 +46,7 @@ export const rutas = [
   },
   {
     id: 5,
+    categoria: "LAGO · NATURALEZA",
     nombre: "Lago Villarrica",
     imagen: lagoVillarrica,
     alt: "Lago Villarrica",
@@ -50,6 +55,7 @@ export const rutas = [
   },
   {
     id: 6,
+    categoria: "PARQUE · TEMUCO",
     nombre: "Parque Isla Cautín",
     imagen: islaCautin,
     alt: "Parque Isla Cautín",
@@ -58,6 +64,7 @@ export const rutas = [
   },
   {
     id: 7,
+    categoria: "BOSQUE · NATURALEZA",
     nombre: "Bosque Pehuén",
     imagen: bosquePehuen,
     alt: "Bosque Pehuén",
@@ -66,6 +73,7 @@ export const rutas = [
   },
   {
     id: 8,
+    categoria: "MIRADOR · SENDERISMO",
     nombre: "Mirador Cerro Ñielol",
     imagen: nielol,
     alt: "Mirador del cerro Ñielol",
