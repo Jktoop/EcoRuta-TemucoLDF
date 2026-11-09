@@ -1,5 +1,3 @@
-import "./TarjetaRuta.css";
-
 export default function TarjetaRuta({
   nombre,
   imagen,
@@ -12,18 +10,18 @@ export default function TarjetaRuta({
   categoria,
 }) {
   return (
-    <a className="tarjeta-ruta" href={href}>
-      <img className="tarjeta-ruta__imagen" src={imagen} alt={alt} loading="lazy" />
+    <a className="ruta-card" href={href}>
+      <img src={imagen} alt={alt} loading="lazy" />
 
-      <div className="tarjeta-ruta__contenido">
-        <span className="tarjeta-ruta__categoria">{categoria || "RUTA DESTACADA"}</span>
-        <h2 className="tarjeta-ruta__nombre">{nombre}</h2>
+      <div className="ruta-info">
+        <span className="ruta-categoria">{categoria || "RUTA DESTACADA"}</span>
+        <h2>{nombre}</h2>
 
         {descripcion && (
-          <p className="tarjeta-ruta__descripcion">{descripcion}</p>
+          <p>{descripcion}</p>
         )}
 
-        <dl className="tarjeta-ruta__datos">
+        {(distanciaKm != null || dificultad || typeof accesible === "boolean") && <dl className="tarjeta-ruta__datos">
           {distanciaKm != null && (
             <div className="tarjeta-ruta__dato">
               <dt>Distancia</dt>
@@ -44,9 +42,9 @@ export default function TarjetaRuta({
               <dd>{accesible ? "Accesible" : "No accesible"}</dd>
             </div>
           )}
-        </dl>
+        </dl>}
       </div>
-        <span className="tarjeta-ruta__enlace">Ver detalle <span aria-hidden="true">→</span></span>
+        <span className="ruta-link">Ver detalle <span aria-hidden="true">→</span></span>
     </a>
   );
 }
