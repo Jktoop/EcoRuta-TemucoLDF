@@ -1,0 +1,385 @@
+.contenido {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 40px;
+}
+
+.etiqueta {
+  color: var(--naranja);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.inicio-hero {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  padding: 30px max(20px, calc((100vw - 1180px) / 2));
+  border-radius: 0;
+  color: #fff;
+  background:
+    linear-gradient(120deg, rgba(25, 57, 29, 0.96), rgba(47, 93, 43, 0.87)),
+    url("../assets/rutas/bosquepehuen.jpeg") center / cover;
+}
+
+.hero-copy {
+  max-width: 650px;
+}
+
+.hero-copy .etiqueta {
+  color: #d6e7b6;
+}
+
+.hero-copy h1 {
+  margin: 8px 0 10px;
+  font-size: clamp(27px, 5vw, 42px);
+  line-height: 1.12;
+}
+
+.hero-copy > p:not(.etiqueta) {
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
+}
+
+.boton-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--verde-oscuro);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.boton-hero:hover {
+  background: #edf2e7;
+}
+
+.buscador-rutas {
+  padding: 17px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--texto);
+}
+
+.buscador-rutas h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.buscador-rutas label,
+.filtro-rutas label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--texto-secundario);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.buscador-rutas form {
+  display: flex;
+  gap: 7px;
+}
+
+.buscador-rutas input,
+.filtro-rutas input {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 11px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+  font-size: 13px;
+}
+
+.buscador-rutas button {
+  padding: 0 12px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--verde);
+  color: #fff;
+  font-weight: 700;
+}
+
+.buscador-rutas > p {
+  margin-top: 8px;
+  color: var(--texto-secundario);
+  font-size: 11px;
+}
+
+.clima {
+  padding: 17px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--texto);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.clima-encabezado {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-detalle {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px 12px;
+  border: 1px solid var(--borde);
+  border-radius: 9px;
+  background: var(--tag-fondo);
+  color: var(--verde-oscuro);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+}
+
+.btn-detalle:hover {
+  filter: brightness(0.97);
+}
+
+.btn-detalle:focus-visible {
+  outline: 3px solid var(--naranja);
+  outline-offset: 2px;
+}
+
+.detalle-clima {
+  margin-top: 12px;
+}
+
+.detalle-clima[hidden] {
+  display: none;
+}
+
+.clima-icono {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border-radius: 12px;
+  background: #fff2c9;
+  font-size: 22px;
+}
+
+.clima-etiqueta {
+  color: var(--naranja);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.9px;
+}
+
+.clima h2 {
+  font-size: 17px;
+}
+
+.clima-estado {
+  margin-top: 12px;
+  color: var(--texto-secundario);
+  font-size: 11px;
+}
+
+.clima-datos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.clima-datos p {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--tag-fondo);
+}
+
+.clima-datos span {
+  color: var(--texto-secundario);
+  font-size: 9px;
+}
+
+.clima-datos strong {
+  font-size: 13px;
+}
+
+.aviso-clima {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-left: 3px solid var(--verde);
+  border-radius: 5px;
+  background: var(--tag-fondo);
+  font-size: 11px;
+}
+
+.clima-fuente {
+  margin-top: 8px;
+  color: var(--texto-secundario);
+  font-size: 9px;
+}
+
+.rutas-destacadas,
+.emprendimientos {
+  width: min(100% - 32px, 1180px);
+  margin: 30px auto 0;
+}
+
+.seccion-encabezado {
+  margin-bottom: 13px;
+}
+
+.seccion-encabezado h2 {
+  margin: 3px 0;
+  font-size: 22px;
+}
+
+.seccion-encabezado > p:last-child {
+  color: var(--texto-secundario);
+  font-size: 13px;
+}
+
+.top3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.destacado {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 190px;
+  overflow: hidden;
+  border-radius: 14px;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+}
+
+.destacado::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.78), transparent 72%);
+  content: "";
+}
+
+.destacado .foto {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.destacado:hover .foto {
+  transform: scale(1.05);
+}
+
+.info {
+  position: relative;
+  z-index: 1;
+  padding: 16px;
+}
+
+.info h3 {
+  font-size: 18px;
+}
+
+.info p {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+}
+
+.chip {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  padding: 5px 9px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 11px;
+}
+
+.negocios-lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.negocio {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 15px;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  background: var(--superficie);
+}
+
+.negocio-icono {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--tag-fondo);
+  font-size: 21px;
+}
+
+.negocio-tipo {
+  color: var(--naranja);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.negocio h3 {
+  margin: 2px 0 4px;
+  font-size: 16px;
+}
+
+.negocio div > p:last-child {
+  color: var(--texto-secundario);
+  font-size: 12px;
+}
+
+@media (min-width: 700px) {
+  .inicio-hero {
+    grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.8fr) minmax(280px, 1fr);
+    gap: 28px;
+    min-height: 360px;
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .top3 {
+    grid-template-columns: 1.35fr 1fr 1fr;
+  }
+
+  .destacado {
+    min-height: 225px;
+  }
+
+  .negocios-lista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

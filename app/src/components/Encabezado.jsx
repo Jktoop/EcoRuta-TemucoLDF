@@ -1,7 +1,8 @@
-export default function Encabezado() {
+export default function Encabezado({ enlaces = ["Inicio", "Catálogo", "Contacto"], paginaActual = "Inicio" }) {
+  const paginas = { Inicio: "inicio", Catálogo: "catalogo", Contacto: "contacto" };
   return (
     <header className="barra">
-      <a className="marca" href="index.html" aria-label="EcoRuta, inicio">
+      <a className="marca" href="?page=inicio" aria-label="EcoRuta, inicio">
         <span className="logo">🌳</span>
         <span>
           <strong>EcoRuta</strong>
@@ -10,11 +11,7 @@ export default function Encabezado() {
       </a>
 
       <nav className="navegacion" aria-label="Navegación principal">
-        <a href="index.html" aria-current="page">
-          Inicio
-        </a>
-        <a href="pages/catalogo.html">Catálogo</a>
-        <a href="pages/contacto.html">Contacto</a>
+        {enlaces.map((texto) => <a key={texto} href={`?page=${paginas[texto]}`} aria-current={paginaActual === texto ? "page" : undefined}>{texto}</a>)}
       </nav>
 
       <div className="barra-derecha">
