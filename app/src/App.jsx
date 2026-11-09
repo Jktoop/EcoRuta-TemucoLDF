@@ -1,37 +1,20 @@
 import Encabezado from "./components/Encabezado.jsx";
-import BannerPrincipal from "./components/BannerPrincipal.jsx";
-import TarjetaRuta from "./components/TarjetaRuta.jsx";
-import ListaRutas from "./components/ListaRutas.jsx";
 import PiePagina from "./components/PiePagina.jsx";
+import Inicio from "./pages/Inicio.jsx";
+import Catalogo from "./pages/Catalogo.jsx";
+import DetalleRuta from "./pages/DetalleRuta.jsx";
+import Contacto from "./pages/Contacto.jsx";
 import { rutas } from "./datos/rutas.js";
-import imagenPrueba from "./assets/react.svg";
- 
-function App() {
-  return (
-    <>
-      <Encabezado
-        enlaces={["Inicio", "Catálogo", "Contacto"]}
-        paginaActual="Inicio"
-      />
-      <main>
-        <BannerPrincipal
-          titulo="Rutas sostenibles de La Araucanía"
-          subtitulo="Senderos y emprendimientos cerca de Temuco"
-        />
-        {/* Tarjeta de prueba (encargo C): se quita al final */}
-        <TarjetaRuta
-          nombre="Cerro Ñielol"
-          imagen={imagenPrueba}
-          alt="Imagen de prueba"
-          distanciaKm={4}
-          dificultad="baja"
-          accesible={true}
-        />
-        <ListaRutas rutas={rutas} />
-      </main>
-      <PiePagina />
-    </>
-  );
+
+export default function App() {
+  const params = new URLSearchParams(window.location.search);
+  const pagina = params.get("page") || "inicio";
+  const paginaNombre = { inicio: "Inicio", catalogo: "Catálogo", contacto: "Contacto" }[pagina] || "";
+  const ruta = rutas.find((item) => String(item.id) === params.get("ruta"));
+  let contenido;
+  if (pagina === "catalogo") contenido = <Catalogo rutas={rutas} />;
+  else if (pagina === "detalle") contenido = <DetalleRuta ruta={ruta} />;
+  else if (pagina === "contacto") contenido = <Contacto />;
+  else contenido = <Inicio rutas={rutas} />;
+  return <><Encabezado enlaces={["Inicio", "Catálogo", "Contacto"]} paginaActual={paginaNombre} /><main className="contenido">{contenido}</main><PiePagina /></>;
 }
- 
-export default App;
