@@ -7,7 +7,8 @@ export default function Buscador({ placeholder }) {
         Buscar por nombre o lugar
       </label>
 
-      <form action="pages/catalogo.html" method="get">
+      <form action="" method="get">
+        <input type="hidden" name="page" value="catalogo" />
         <input
           id="busqueda-ruta"
           name="q"
