@@ -130,6 +130,19 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.clima-encabezado::-webkit-details-marker {
+  display: none;
+}
+
+.clima-titulo {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
 }
 
 .btn-detalle {
