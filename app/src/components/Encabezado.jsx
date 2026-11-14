@@ -8,7 +8,7 @@ export default function Encabezado({ enlaces = ["Inicio", "Catálogo", "Contacto
           <strong>EcoRuta</strong>
           <small>TEMUCO · CL</small>
         </span>
-      </a>
+      </Link>
 
       <nav className="navegacion" aria-label="Navegación principal">
         {enlaces.map((texto) => <a key={texto} href={`?page=${paginas[texto]}`} aria-current={paginaActual === texto ? "page" : undefined}>{texto}</a>)}

@@ -359,3 +359,8 @@ body:has(.tema-checkbox:checked) .tema-control .icono-sol,
 body:has(.tema-checkbox:checked) .tema-control .texto-cambiar-claro {
   display: inline;
 }
+
+.navegacion a.activo {
+  color: var(--verde);
+  font-weight: 800;
+}
