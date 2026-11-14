@@ -1,4 +1,14 @@
+import { useNavigate } from "react-router";
+
 export default function Buscador({ placeholder }) {
+  const navigate = useNavigate();
+
+  function buscar(evento) {
+    evento.preventDefault();
+    const texto = new FormData(evento.currentTarget).get("q").trim();
+    navigate(texto ? `/rutas?q=${encodeURIComponent(texto)}` : "/rutas");
+  }
+
   return (
     <aside className="buscador-rutas" aria-labelledby="buscar-titulo">
       <h2 id="buscar-titulo">Encuentra tu próxima ruta</h2>
@@ -7,8 +17,7 @@ export default function Buscador({ placeholder }) {
         Buscar por nombre o lugar
       </label>
 
-      <form action="" method="get">
-        <input type="hidden" name="page" value="catalogo" />
+      <form onSubmit={buscar}>
         <input
           id="busqueda-ruta"
           name="q"
