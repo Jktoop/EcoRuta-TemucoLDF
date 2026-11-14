@@ -15,19 +15,38 @@ export default function BannerPrincipal({ titulo, subtitulo }) {
 
       <Buscador placeholder="Ej. Conguillío" />
 
-      <details className="clima">
-        <summary className="clima-encabezado">
+      <section className="clima" aria-labelledby="titulo-clima">
+        <div className="clima-encabezado">
           <span className="clima-icono" aria-hidden="true">☀️</span>
-          <span>
-            <span className="clima-etiqueta">ANTES DE SALIR</span>
-            <span className="clima-titulo">Clima en La Araucanía</span>
-          </span>
-        </summary>
-        <div className="detalle-clima">
-          <p>Revisa el pronóstico local antes de iniciar tu recorrido.</p>
-          <p className="clima-fuente">La información del clima se agregará más adelante.</p>
+          <div>
+            <p className="clima-etiqueta">ANTES DE SALIR</p>
+            <h2 id="titulo-clima" className="clima-titulo">Clima en La Araucanía</h2>
+          </div>
         </div>
-      </details>
+
+        <button
+          type="button"
+          className="btn-detalle"
+          id="btn-detalle-clima"
+          aria-expanded="false"
+          aria-controls="detalle-clima"
+        >
+          Ver detalle del clima
+        </button>
+
+        <div id="detalle-clima" className="detalle-clima" hidden>
+          <p id="estado" className="clima-estado" aria-live="polite">
+            Consultando el clima actual…
+          </p>
+          <div className="clima-datos">
+            <p><span>Temperatura</span><strong id="temperatura">--</strong></p>
+            <p><span>Viento</span><strong id="viento">--</strong></p>
+            <p><span>Cielo</span><strong id="cielo">--</strong></p>
+          </div>
+          <p id="aviso-clima" className="aviso-clima" hidden></p>
+          <p className="clima-fuente">Datos actuales de Open-Meteo</p>
+        </div>
+      </section>
     </section>
   );
 }
