@@ -10,7 +10,7 @@ import NoEncontrada from "./pages/NoEncontrada.jsx";
 export default function App() {
   return (
     <>
-      <Encabezado enlaces={["Inicio", "Catálogo", "Contacto"]} paginaActual="Inicio" />
+      <Encabezado />
       <main className="contenido">
         <Routes>
           <Route path="/" element={<Inicio />} />
