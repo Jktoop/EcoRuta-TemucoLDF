@@ -1,17 +1,33 @@
-export default function Encabezado({ enlaces = ["Inicio", "Catálogo", "Contacto"], paginaActual = "Inicio" }) {
-  const paginas = { Inicio: "inicio", Catálogo: "catalogo", Contacto: "contacto" };
+import { NavLink, Link } from "react-router";
+
+const enlaces = [
+  { texto: "Inicio", ruta: "/" },
+  { texto: "Catálogo", ruta: "/rutas" },
+  { texto: "Contacto", ruta: "/contacto" },
+];
+
+export default function Encabezado() {
   return (
     <header className="barra">
-      <a className="marca" href="?page=inicio" aria-label="EcoRuta, inicio">
+      <Link className="marca" to="/" aria-label="EcoRuta, inicio">
         <span className="logo">🌳</span>
         <span>
           <strong>EcoRuta</strong>
           <small>TEMUCO · CL</small>
         </span>
-      </a>
+      </Link>
 
       <nav className="navegacion" aria-label="Navegación principal">
-        {enlaces.map((texto) => <a key={texto} href={`?page=${paginas[texto]}`} aria-current={paginaActual === texto ? "page" : undefined}>{texto}</a>)}
+        {enlaces.map((enlace) => (
+          <NavLink
+            key={enlace.ruta}
+            to={enlace.ruta}
+            end={enlace.ruta === "/"}
+            className={({ isActive }) => (isActive ? "activo" : "")}
+          >
+            {enlace.texto}
+          </NavLink>
+        ))}
       </nav>
 
       <div className="barra-derecha">

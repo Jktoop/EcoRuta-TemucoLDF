@@ -1,14 +1,14 @@
-.contenido > section:first-child {
+.contacto-formulario {
   max-width: 640px;
   margin: 0 auto;
 }
 
-.contenido > section:first-child h1 {
+.contacto-formulario h1 {
   font-size: 24px;
   margin-bottom: 4px;
 }
 
-.contenido > section:first-child > p {
+.contacto-formulario > p {
   color: var(--texto-secundario);
   font-size: 13px;
   margin-bottom: 16px;

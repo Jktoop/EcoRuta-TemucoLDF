@@ -1,4 +1,8 @@
+
+import { Link } from "react-router";
+
 export default function TarjetaRuta({
+  id,
   nombre,
   imagen,
   alt,
@@ -6,13 +10,12 @@ export default function TarjetaRuta({
   dificultad,
   accesible,
   descripcion,
-  href,
   categoria,
 }) {
   const tieneDatos = distanciaKm != null || dificultad || typeof accesible === "boolean";
 
   return (
-    <a className="ruta-card" href={href}>
+    <Link className="ruta-card" to={`/rutas/${id}`}>
       <img src={imagen} alt={alt} loading="lazy" />
       <div className="ruta-info">
         <span className="ruta-categoria">{categoria || "RUTA DESTACADA"}</span>
@@ -27,6 +30,6 @@ export default function TarjetaRuta({
         )}
         <span className="ruta-link">Ver detalle <span aria-hidden="true">→</span></span>
       </div>
-    </a>
+    </Link>
   );
 }
