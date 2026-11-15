@@ -148,7 +148,7 @@ Se completa en la semana 12, cuando la API se construya con json-server.
 |---|---|
 | Nombre | Open-Meteo |
 | URL base | https://api.open-meteo.com/v1 |
-| Endpoint que usaremos | `/forecast?latitude=-38.74&longitude=-72.6&current=temperature_2m,wind_speed_10m,weather_code` |
+| Endpoint que usaremos | `/forecast?latitude=-38.74&longitude=-72.59&current=temperature_2m,wind_speed_10m,weather_code&timezone=America%2FSantiago` |
 | Requiere autenticación | No (es un requisito del curso) |
-| Vista en que aparece | Inicio (widget «Clima en La Araucanía») |
+| Vista en que aparece | Inicio (detalle del clima) |
 | Para qué le sirve al usuario | Saber si es buen momento para salir a una ruta |
