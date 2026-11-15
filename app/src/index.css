@@ -3,3 +3,27 @@
 @import "./styles/catalogo.css";
 @import "./styles/detalle.css";
 @import "./styles/contacto.css";
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.filtros button {
+  padding: 7px 14px;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  background: var(--superficie);
+  color: var(--texto);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.filtros button[aria-pressed="true"] {
+  border-color: var(--verde);
+  background: var(--verde);
+  color: #fff;
+}
