@@ -1,0 +1,117 @@
+{
+  "rutas": [
+    {
+      "id": 1,
+      "nombre": "Parque Nacional Conguillío",
+      "categoria": "trekking",
+      "imagen": "img/rutas/parqueconguillio.jpg",
+      "alt": "Paisaje del Parque Nacional Conguillío",
+      "descripcion": "Recorre bosques de araucarias milenarias, lagunas y senderos con vistas al volcán Llaima."
+    },
+    {
+      "id": 2,
+      "nombre": "Volcán Villarrica",
+      "categoria": "aventura",
+      "imagen": "img/rutas/volcanvillarrica.jpg",
+      "alt": "Volcán Villarrica",
+      "descripcion": "Un paisaje volcánico emblemático, con alternativas para admirar la montaña y su entorno."
+    },
+    {
+      "id": 3,
+      "nombre": "Museo Regional de La Araucanía",
+      "categoria": "cultural",
+      "imagen": "img/rutas/museo.jpg",
+      "alt": "Museo Regional de La Araucanía",
+      "descripcion": "Conoce la historia y el patrimonio cultural de la región en una visita por Temuco."
+    },
+    {
+      "id": 4,
+      "nombre": "Mercado Municipal de Temuco",
+      "categoria": "gastronomia",
+      "imagen": "img/rutas/mercado.jpeg",
+      "alt": "Mercado Municipal de Temuco",
+      "descripcion": "Un punto de encuentro para descubrir productos, cocina y vida local."
+    },
+    {
+      "id": 5,
+      "nombre": "Lago Villarrica",
+      "categoria": "naturaleza",
+      "imagen": "img/rutas/lagovillarrica.jpg",
+      "alt": "Lago Villarrica",
+      "descripcion": "Disfruta del paisaje lacustre y de las vistas abiertas hacia el volcán Villarrica."
+    },
+    {
+      "id": 6,
+      "nombre": "Parque Isla Cautín",
+      "categoria": "parque",
+      "imagen": "img/rutas/islacautin.jpg",
+      "alt": "Parque Isla Cautín",
+      "descripcion": "Un espacio verde junto al río para caminar, descansar y disfrutar al aire libre."
+    },
+    {
+      "id": 7,
+      "nombre": "Bosque Pehuén",
+      "categoria": "naturaleza",
+      "imagen": "img/rutas/bosquepehuen.jpeg",
+      "alt": "Bosque Pehuén",
+      "descripcion": "Adéntrate en un entorno de bosque nativo y conoce de cerca el paisaje del pehuén."
+    },
+    {
+      "id": 8,
+      "nombre": "Mirador Cerro Ñielol",
+      "categoria": "trekking",
+      "imagen": "img/rutas/mirador.jpg",
+      "alt": "Mirador del cerro Ñielol",
+      "descripcion": "Camina entre vegetación nativa y contempla Temuco desde uno de sus miradores."
+    }
+  ],
+  "emprendimientos": [
+    {
+      "id": 1,
+      "nombre": "Artesanía de La Araucanía",
+      "tipo": "artesania",
+      "descripcion": "Descubre piezas y tejidos elaborados por emprendedores de la región.",
+      "icono": "🧺"
+    },
+    {
+      "id": 2,
+      "nombre": "Sabores de La Araucanía",
+      "tipo": "gastronomia",
+      "descripcion": "Conoce productos y preparaciones de pequeños negocios locales.",
+      "icono": "🍯"
+    },
+    {
+      "id": 3,
+      "nombre": "Experiencias guiadas",
+      "tipo": "experiencias",
+      "descripcion": "Encuentra propuestas de emprendedores para recorrer la naturaleza con cuidado.",
+      "icono": "🚲"
+    }
+  ],
+  "resenas": [
+    {
+      "id": 1,
+      "rutaId": 1,
+      "autor": "Ana",
+      "calificacion": 5,
+      "comentario": "Ruta muy limpia y bien señalizada.",
+      "fecha": "2026-11-12T12:45:00Z"
+    },
+    {
+      "id": 2,
+      "rutaId": 2,
+      "autor": "Luis",
+      "calificacion": 4,
+      "comentario": "Vistas impresionantes, conviene ir temprano.",
+      "fecha": "2026-11-13T09:30:00Z"
+    },
+    {
+      "id": 3,
+      "rutaId": 8,
+      "autor": "Camila",
+      "calificacion": 5,
+      "comentario": "Un paseo corto y lindo para ver Temuco desde arriba.",
+      "fecha": "2026-11-14T16:10:00Z"
+    }
+  ]
+}
