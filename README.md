@@ -36,8 +36,8 @@ npm run dev
  
 ## Estado del proyecto
  
-- Sprint actual: Sprint 3
-- Última actualización: (14/11/2026)
+- Sprint actual: Sprint 2
+- Última actualización: (19/11/2026)
 ## Tablero Kanban
  
 Enlace al tablero: https://trello.com/invite/b/6a7dd5eb5157718e082ae58c/ATTIec679906585416939236bb106afd3aa663364091/ecoruta-temuco-ldf
