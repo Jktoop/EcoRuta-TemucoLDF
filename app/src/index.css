@@ -27,3 +27,131 @@
   background: var(--verde);
   color: #fff;
 }
+
+/* ---------- API propia (semana 12, integrador) ---------- */
+.estado {
+  margin: 12px 0;
+  color: var(--texto);
+}
+
+.estado.error {
+  color: #a3261b;
+  font-weight: 700;
+}
+
+body:has(.tema-checkbox:checked) .estado.error {
+  color: #ff9b8f;
+}
+
+.resenas {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-left: 4px solid var(--dorado);
+  border-radius: 10px;
+  padding: 14px;
+  margin: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.resenas h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.resenas ul {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.resena {
+  padding: 10px 12px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: var(--control-fondo);
+}
+
+.resena .estrellas {
+  color: var(--naranja);
+}
+
+.resena .fecha {
+  color: var(--texto-secundario);
+  font-size: 11px;
+}
+
+.borrar {
+  margin-top: 6px;
+  padding: 4px 12px;
+  border: 1.5px solid #a3261b;
+  border-radius: 999px;
+  background: var(--superficie);
+  color: #a3261b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+body:has(.tema-checkbox:checked) .borrar {
+  border-color: #ff9b8f;
+  color: #ff9b8f;
+}
+
+.formulario-resena {
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  background: var(--control-fondo);
+}
+
+.formulario-resena h3 {
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.formulario-resena label {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.formulario-resena input,
+.formulario-resena select,
+.formulario-resena textarea {
+  padding: 8px 10px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+}
+
+.formulario-resena input:focus-visible,
+.formulario-resena select:focus-visible,
+.formulario-resena textarea:focus-visible {
+  outline: 3px solid var(--dorado);
+  outline-offset: 2px;
+}
+
+.formulario-resena button[type="submit"] {
+  justify-self: start;
+  margin-top: 6px;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--verde);
+  color: #fff;
+  font-weight: 700;
+}
+
+.formulario-resena button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.formulario-resena .mensaje {
+  min-height: 1.4em;
+  font-size: 12px;
+}
