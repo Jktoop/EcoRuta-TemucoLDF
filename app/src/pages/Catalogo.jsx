@@ -83,9 +83,10 @@ export default function Catalogo() {
       {!cargando && !error && <ListaRutas rutas={visibles} />}
       {!cargando && !error && visibles.length === 0 && (
         <p className="sin-resultados">
-          No encontramos rutas con esa búsqueda. Prueba con otro nombre, lugar o categoría.
+          No encontramos rutas con esa búsqueda. Prueba con otro nombre, lugar o categoría .
         </p>
       )}
     </section>
   );
 }
+
