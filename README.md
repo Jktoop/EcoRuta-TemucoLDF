@@ -36,8 +36,8 @@ npm run dev
  
 ## Estado del proyecto
  
-- Sprint actual: Sprint 2
-- Última actualización: (19/11/2026)
+- Sprint actual: Sprint 3
+- Última actualización: (21/11/2026)
 ## Tablero Kanban
  
 Enlace al tablero: https://trello.com/invite/b/6a7dd5eb5157718e082ae58c/ATTIec679906585416939236bb106afd3aa663364091/ecoruta-temuco-ldf
@@ -77,7 +77,7 @@ interface Ruta {
   id: number;
   nombre: string;
   categoria: "trekking" | "aventura" | "cultural" | "gastronomia" | "naturaleza" | "parque";
-  imagen: string;          // ruta del archivo, por ejemplo "/img/rutas/parqueconguillio.jpg"
+  imagen: string;          // ruta del archivo, por ejemplo "img/rutas/parqueconguillio.jpg"
   alt: string;             // obligatorio
   descripcion: string;     // máx 200 caracteres
   distanciaKm?: number;    // opcional, mayor que 0
@@ -87,7 +87,7 @@ interface Ruta {
 ```
  
 ```json
-{ "id": 1, "nombre": "Parque Nacional Conguillío", "categoria": "trekking", "imagen": "/img/rutas/parqueconguillio.jpg", "alt": "Paisaje del Parque Nacional Conguillío", "descripcion": "Recorre bosques de araucarias milenarias, lagunas y senderos con vistas al volcán Llaima.", "distanciaKm": 12, "dificultad": "media", "accesible": false }
+{ "id": 1, "nombre": "Parque Nacional Conguillío", "categoria": "trekking", "imagen": "img/rutas/parqueconguillio.jpg", "alt": "Paisaje del Parque Nacional Conguillío", "descripcion": "Recorre bosques de araucarias milenarias, lagunas y senderos con vistas al volcán Llaima.", "distanciaKm": 12, "dificultad": "media", "accesible": false }
 ```
  
 **`emprendimientos`**
@@ -140,7 +140,31 @@ La búsqueda y los filtros del Catálogo se hacen en el frontend con `useState`,
  
 ### Cómo levantar la API en local
  
-Se completa en la semana 12, cuando la API se construya con json-server.
+La API propia se construye con [json-server](https://github.com/typicode/json-server) **0.17.4** (versión fija: la 1.0 guarda los `id` como texto y rompe las búsquedas por id). Los datos están en `app/db.json`.
+
+Se necesitan **dos terminales abiertas**, las dos dentro de `app`:
+
+| Terminal | Comando | Queda escuchando en |
+|---|---|---|
+| 1 · API | `npm run api` | http://localhost:3001 |
+| 2 · Aplicación | `npm run dev` | http://localhost:5173 |
+
+Pasos:
+
+1. `git checkout main` y `git pull` para tener la última versión.
+2. `cd app` y `npm install` (siempre después de un `git pull`; sin esto, `npm run api` responde «json-server: command not found»).
+3. Terminal 1: `npm run api`. Debe listar los recursos `rutas`, `emprendimientos` y `resenas`.
+4. Terminal 2: `npm run dev`.
+5. Comprobar en el navegador: http://localhost:3001/rutas (arreglo de rutas) y http://localhost:5173 (la aplicación).
+
+Cómo probarlo:
+
+1. En el navegador, http://localhost:3001/rutas/2 (200) y http://localhost:3001/rutas/9 (404, objeto vacío).
+2. En la aplicación, entrar al detalle de una ruta, publicar una reseña, recargar la página (la reseña sigue ahí) y borrarla. Mirar `db.json` después de cada paso.
+3. Detener la API con Ctrl + C y recargar: cada página muestra su mensaje de error en vez de quedar en blanco.
+4. `#/rutas/99`: «Ruta no encontrada». La consola muestra un 404 de red; es esperado.
+
+Al terminar de probar, desde la raíz del repositorio: `git restore app/db.json`. json-server reescribe `db.json` con lo que se crea o borra al probar, y esos cambios no se suben.
  
 ### API pública externa
  
