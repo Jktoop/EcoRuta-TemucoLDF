@@ -170,9 +170,9 @@ Al terminar de probar, desde la raíz del repositorio: `git restore app/db.json`
  
 | Dato | Valor |
 |---|---|
-| Nombre | Open-Meteo |
-| URL base | https://api.open-meteo.com/v1 |
-| Endpoint que usaremos | `/forecast?latitude=-38.74&longitude=-72.59&current=temperature_2m,wind_speed_10m,weather_code&timezone=America%2FSantiago` |
+| Nombre | Open-Meteo, calidad del aire |
+| URL base | https://api.open-meteo.com/v1, https://air-quality-api.open-meteo.com/v1 |
+| Endpoint que usaremos | `/forecast?latitude=-38.74&longitude=-72.59&current=temperature_2m,wind_speed_10m,weather_code&timezone=America%2FSantiago`, `/air-quality?latitude=-38.74&longitude=-72.59&current=pm2_5,pm10,uv_index` |
 | Requiere autenticación | No (es un requisito del curso) |
-| Vista en que aparece | Inicio (detalle del clima) |
+| Vista en que aparece | Inicio (detalle del clima, calidad del aire en la ruta) |
 | Para qué le sirve al usuario | Saber si es buen momento para salir a una ruta |
