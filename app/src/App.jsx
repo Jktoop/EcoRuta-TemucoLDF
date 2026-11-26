@@ -6,12 +6,14 @@ import Catalogo from "./pages/Catalogo.jsx";
 import DetalleRuta from "./pages/DetalleRuta.jsx";
 import Contacto from "./pages/Contacto.jsx";
 import NoEncontrada from "./pages/NoEncontrada.jsx";
+import AvisoPublicacion from "./components/AvisoPublicacion.jsx";
 
 export default function App() {
   return (
     <>
       <Encabezado />
       <main className="contenido">
+        <AvisoPublicacion />
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/rutas" element={<Catalogo />} />
