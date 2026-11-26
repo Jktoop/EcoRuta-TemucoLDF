@@ -155,3 +155,48 @@ body:has(.tema-checkbox:checked) .borrar {
   min-height: 1.4em;
   font-size: 12px;
 }
+/* ---------- API externa y publicación (semana 13) ---------- */
+.clima {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-left: 4px solid var(--dorado);
+  border-radius: 10px;
+  padding: 14px;
+  margin: 24px 0 14px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.clima h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.clima .aviso-clima {
+  margin-top: 8px;
+  font-weight: 700;
+  color: var(--verde-oscuro);
+}
+
+.clima .fuente {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--texto-secundario);
+}
+
+.clima .fuente a {
+  color: var(--verde);
+  text-decoration: underline;
+}
+
+.aviso-publicacion {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border: 1px solid #d9a400;
+  border-left: 4px solid #d9a400;
+  border-radius: 8px;
+  background: #fff4c2;
+  color: #3d2f00;
+  font-size: 14px;
+  line-height: 1.5;
+}
