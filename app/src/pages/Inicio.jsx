@@ -1,8 +1,9 @@
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import BannerPrincipal from "../components/BannerPrincipal.jsx";
+import ClimaActual from "../components/CalidadAire.jsx";
 import { API_URL } from "../api.js";
+import CalidadAire from "../components/CalidadAire.jsx";
 
 export default function Inicio() {
   const [rutas, setRutas] = useState([]);
@@ -107,6 +108,8 @@ export default function Inicio() {
           </section>
         </>
       )}
+
+      <CalidadAire /> {/* después de la lista de rutas */}
     </>
   );
 }
